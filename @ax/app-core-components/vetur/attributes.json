@@ -1,0 +1,5 @@
+{
+  "ax-table/table-column": {
+    "description": "表头，类型参考AxComCore.ITableColumns"
+  }
+}

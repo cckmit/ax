@@ -1,0 +1,102 @@
+{
+  "_from": "@ax/app-core-framework@2.5.11",
+  "_id": "@ax/app-core-framework@2.5.11",
+  "_inBundle": false,
+  "_integrity": "sha512-jwRfJkMHfXdpfDpONQsSAO1nwcaX1uePUpmG1UHamnFCK82xLVg4Ofa3H0edWy9EJsa61Q7DLeIM2CzvgXvPxw==",
+  "_location": "/@ax/app-core-framework",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@ax/app-core-framework@2.5.11",
+    "name": "@ax/app-core-framework",
+    "escapedName": "@ax%2fapp-core-framework",
+    "scope": "@ax",
+    "rawSpec": "2.5.11",
+    "saveSpec": null,
+    "fetchSpec": "2.5.11"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/",
+    "/@ax/app-core-components"
+  ],
+  "_resolved": "http://183.3.129.44:31060/@ax%2fapp-core-framework/-/app-core-framework-2.5.11.tgz",
+  "_shasum": "869c343548e16c1d9f439e776346dbae1fbd7baa",
+  "_spec": "@ax/app-core-framework@2.5.11",
+  "_where": "C:\\Users\\Mr.Yuan\\Desktop\\ws\\app-demo-modules",
+  "author": {
+    "name": "LNK-FE"
+  },
+  "bugs": {
+    "url": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-core/app-core-framework/app-core-framework-v2/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "js-cookie": "^2.2.1",
+    "ts-md5": "^1.2.7",
+    "vuex-module-decorators": "^0.17.0"
+  },
+  "deprecated": false,
+  "description": "应用核心框架库 2.0",
+  "devDependencies": {
+    "@ax/eslint-config-default": "^1.0.0",
+    "@types/jest": "^24.0.23",
+    "@types/js-cookie": "^2.2.4",
+    "jest": "^24.9.0",
+    "prettier": "^2.0.4",
+    "rollup": "^2.32.1",
+    "rollup-plugin-dts": "^1.4.13",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-jest": "^24.2.0",
+    "ttypescript": "^1.5.10",
+    "typescript": "^4.0.3",
+    "typescript-transform-paths": "^1.1.14",
+    "vue": "^2.6.11",
+    "vue-property-decorator": "^9.1.2",
+    "vuex": "^3.1.0"
+  },
+  "files": [
+    "lib",
+    "src",
+    "types"
+  ],
+  "homepage": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-core/app-core-framework/app-core-framework-v2",
+  "keywords": [
+    "vue",
+    "framework"
+  ],
+  "license": "MIT",
+  "main": "lib/index.common.js",
+  "module": "lib/index.esm.js",
+  "name": "@ax/app-core-framework",
+  "peerDependencies": {
+    "vue": "2.x",
+    "vue-property-decorator": ">=8.0.0",
+    "vuex": "3.x"
+  },
+  "private": false,
+  "publishConfig": {
+    "registry": "http://192.168.2.202:4873/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.2.30:nncs/front-end/html/vue/app-core/app-core-framework/app-core-framework-v2.git"
+  },
+  "scripts": {
+    "deploy": "npm run lib && npm run publish",
+    "lib": "rollup -c",
+    "lib:all": "npm run lib && npm run rollup:type",
+    "lib:publish": "npm publish",
+    "lib:unpublish": "npm unpublish --force",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint --fix src/**",
+    "rollup:type": "node ./build/bundle-types.js",
+    "test": "jest"
+  },
+  "sideEffects": false,
+  "typings": "types/index.d.ts",
+  "version": "2.5.11"
+}

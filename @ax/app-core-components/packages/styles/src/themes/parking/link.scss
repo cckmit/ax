@@ -1,0 +1,148 @@
+@import 'var';
+
+.ax_link {
+  display: inline-flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  font-size: $font_size_normal;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  padding: 0;
+  color: orange;
+
+  &:hover {
+    color: #70b4f7;
+  }
+
+  &:active {
+    color: #3888d7;
+  }
+
+  &.is_disabled {
+    color: #95c8f9;
+  }
+
+  &_primary {
+    color: #449cf2;
+
+    &:hover {
+      color: #70b4f7;
+    }
+
+    &:active {
+      color: #3888d7;
+    }
+
+    &.is_disabled {
+      color: #95c8f9;
+    }
+  }
+
+  &_success {
+    color: #0ebf9c;
+
+    &:hover {
+      color: #10e0b7;
+
+      &.is_underline:hover:after {
+        border-color: #10e0b7;
+      }
+    }
+
+    &:active {
+      color: #0eae8e;
+    }
+
+    &.is_disabled {
+      color: #a8dad0;
+    }
+  }
+
+  &_danger {
+    color: #ff5262;
+
+    &:hover {
+      color: #ff7784;
+
+      &.is_underline:hover:after {
+        border-color: #ff7784;
+      }
+    }
+
+    &:active {
+      color: #df4553;
+    }
+
+    &.is_disabled {
+      color: #ffb0b7;
+    }
+  }
+
+  &_warning {
+    color: #ff9b52;
+
+    &:hover {
+      color: #fdb17a;
+
+      &.is_underline:hover:after {
+        border-color: #fdb17a;
+      }
+    }
+
+    &:active {
+      color: #e58a48;
+    }
+
+    &.is_disabled {
+      color: #ffd1af;
+    }
+  }
+
+  &_info {
+    color: #909399;
+
+    &:hover {
+      color: #a6a9ad;
+
+      &.is_underline:hover:after {
+        border-color: #a6a9ad;
+      }
+    }
+
+    &:active {
+      color: #ced4dd;
+    }
+
+    &[disabled] {
+      color: #c8c9cc;
+    }
+  }
+
+  &.is_disabled {
+    cursor: not-allowed;
+  }
+
+  &.is_underline:hover:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    bottom: 0;
+    border-bottom: 1px solid #70b4f7;
+  }
+
+  &_icon {
+    display: inline-block;
+    font-size: inherit;
+
+    & + span {
+      margin-left: 0.3rem;
+    }
+  }
+}

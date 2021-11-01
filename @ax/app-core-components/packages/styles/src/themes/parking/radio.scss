@@ -1,0 +1,269 @@
+/* 控件默认样式定义 */
+@import 'var';
+
+.ax_radio {
+  display: inline-block;
+  position: relative;
+  height: $line_high_normal;
+
+  /* 普通单选样式 */
+  .radio {
+    height: 100%;
+    box-shadow: $radio_shadow;
+
+    /* 未选中 */
+    .el-radio__input {
+      margin-top: -$line_high_normal * 0.1;
+
+      .el-radio__inner {
+        border: $radio_border;
+        width: $line_high_normal * 0.6;
+        height: $line_high_normal * 0.6;
+        background: $radio_color_normal;
+        border-radius: $radio_radius;
+
+        &::after {
+          width: $line_high_normal * 0.2;
+          height: $line_high_normal * 0.2;
+        }
+
+        &:hover {
+          background: $radio_color_hover;
+        }
+
+        &:focus {
+          background: $radio_color_focus;
+        }
+
+        &:active {
+          background: $radio_color_active;
+        }
+      }
+    }
+
+    /* 普通文字 */
+    .el-radio__label {
+      height: 100%;
+      display: inline-block;
+      font-size: $font_size_normal;
+      line-height: $line_high_normal;
+      padding: 0 $line_high_normal * 0.3 0 $line_high_normal * 0.3;
+      color: $radio_text_normal;
+      text-overflow: ellipsis;
+
+      &:hover {
+        color: $radio_text_hover;
+      }
+
+      &:focus {
+        color: $radio_text_focus;
+      }
+
+      &:active {
+        color: $radio_text_active;
+      }
+    }
+
+    /* 焦点样式 */
+    .is-focus {
+      border-color: $radio_text_focus !important;
+
+      /* 选中 */
+      .el-radio__inner {
+        background: $radio_color_focus;
+
+        &:hover {
+          background: $radio_color_hover;
+        }
+
+        &:focus {
+          background: $radio_color_focus;
+        }
+
+        &:active {
+          background: $radio_color_active;
+        }
+      }
+    }
+  }
+
+  /* 按钮单选样式 */
+  .radio-button {
+    height: 100%;
+    padding: 0;
+
+    .el-radio__input {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+
+    .el-radio__label {
+      font-size: $font_size_normal;
+      line-height: $line_high_normal;
+      padding: 0 $line_high_normal * 0.3 0 $line_high_normal * 0.3;
+      color: $font_color_normal;
+      border: $border_normal;
+      border-radius: $border_radius;
+      box-shadow: $radio_shadow;
+      background: $color_body_normal;
+
+      &:hover {
+        background-color: $color_body_hover;
+        border: $border_hover;
+      }
+
+      &:focus {
+        background-color: $color_body_focus;
+        border: $border_focus;
+      }
+
+      &:active {
+        background-color: $color_body_active;
+        border: $border_active;
+      }
+    }
+  }
+
+  /* 单选框边框样式 */
+  .is-bordered {
+    padding: 0 0 0 $line_high_normal * 0.3;
+    border: $border_normal;
+    border-radius: $border_radius;
+
+    &:hover {
+      border: $border_hover;
+    }
+
+    &:focus {
+      border: $border_focus;
+    }
+
+    &:active {
+      border: $border_active;
+    }
+  }
+
+  /* 普通选中样式 */
+  .is-checked {
+    border-color: $radio_text_selected !important;
+
+    /* 单选框选中 */
+    .el-radio__input {
+      .el-radio__inner {
+        background: $radio_color_selected;
+      }
+    }
+
+    /* 选中文字 */
+    .el-radio__label {
+      color: $radio_text_selected;
+
+      &:hover {
+        color: $radio_text_selected;
+      }
+
+      &:focus {
+        color: $radio_text_focus;
+      }
+
+      &:active {
+        color: $radio_text_active;
+      }
+    }
+  }
+
+  /* 当前选中的按钮文本 */
+  .is-checked.radio-button {
+    .el-radio__label {
+      border: $border_selected;
+      border-left-color: $font_color_highlight !important;
+      background: $color_body_selected;
+      color: $font_color_selected;
+    }
+  }
+
+  /* 禁用状态样式 */
+  .is-disabled {
+    cursor: default !important;
+    border-color: $font_color_disabled !important;
+
+    /* 单选框选中 */
+    .el-radio__input {
+      .el-radio__inner {
+        cursor: default;
+        background: $radio_color_disabled;
+        border-color: $radio_text_disabled !important;
+
+        &::after {
+          cursor: default !important;
+        }
+
+        &:hover {
+          background: $radio_color_disabled;
+        }
+
+        &:focus {
+          background: $radio_color_disabled;
+        }
+
+        &:active {
+          background: $radio_color_disabled;
+        }
+      }
+    }
+
+    /* 选中文字 */
+    .el-radio__label {
+      cursor: default !important;
+      color: $radio_text_disabled !important;
+
+      &:hover {
+        color: $radio_text_disabled;
+      }
+
+      &:focus {
+        color: $radio_text_disabled;
+      }
+
+      &:active {
+        color: $radio_text_disabled;
+      }
+    }
+  }
+
+  /* 同时匹配禁用和按钮状态 */
+  .is-disabled.radio-button {
+    .el-radio__label {
+      border-color: $font_color_disabled !important;
+      background: $color_body_disabled !important;
+
+      &:hover {
+        background: $color_body_disabled !important;
+        border-color: $font_color_disabled !important;
+      }
+
+      &:focus {
+        background: $color_body_disabled !important;
+        border-color: $font_color_disabled !important;
+      }
+
+      &:active {
+        background: $color_body_disabled !important;
+        border-color: $font_color_disabled !important;
+      }
+    }
+  }
+
+  .el-radio {
+    &.hide_label {
+      .el-radio__label {
+        display: none;
+      }
+    }
+  }
+}
+/*hover 的时候,从白色改成蓝色*/
+.ax_radio .radio .el-radio__input .el-radio__inner:hover {
+  background: $radio_color_selected;
+}

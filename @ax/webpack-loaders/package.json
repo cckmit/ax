@@ -1,0 +1,66 @@
+{
+  "_from": "@ax/webpack-loaders@^1.0.0",
+  "_id": "@ax/webpack-loaders@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-8K3sqqjiWLiCHOQIsIDuBRxNnda4IiQCfhdjQLCZvP4SexgLgj91vhB2++vtFdFW0RMNOmQUR/DWArib+eKLXQ==",
+  "_location": "/@ax/webpack-loaders",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@ax/webpack-loaders@^1.0.0",
+    "name": "@ax/webpack-loaders",
+    "escapedName": "@ax%2fwebpack-loaders",
+    "scope": "@ax",
+    "rawSpec": "^1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "http://183.3.129.44:31060/@ax%2fwebpack-loaders/-/webpack-loaders-1.0.0.tgz",
+  "_shasum": "5527db1df3305da46b976a36b0af26fe57f0c71d",
+  "_spec": "@ax/webpack-loaders@^1.0.0",
+  "_where": "C:\\Users\\Mr.Yuan\\Desktop\\ws\\app-demo-modules",
+  "author": {
+    "name": "LNK-FE"
+  },
+  "bugs": {
+    "url": "https://183.3.129.44:31017/nncs/front-end/plugin/ax-webpack-loaders/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
+    "highlight.js": "^10.3.2",
+    "markdown-it": "^12.0.2",
+    "markdown-it-container": "^3.0.0",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "deprecated": false,
+  "description": "项目用到的webpack loader合集",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "homepage": "https://183.3.129.44:31017/nncs/front-end/plugin/ax-webpack-loaders",
+  "keywords": [
+    "webpack",
+    "loader"
+  ],
+  "main": "lib/index.js",
+  "name": "@ax/webpack-loaders",
+  "private": false,
+  "publishConfig": {
+    "registry": "http://192.168.2.202:4873/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.2.30:nncs/front-end/plugin/ax-webpack-loaders.git"
+  },
+  "scripts": {
+    "publish": "npm publish",
+    "unpublish": "npm unpublish --force"
+  },
+  "version": "1.0.0"
+}

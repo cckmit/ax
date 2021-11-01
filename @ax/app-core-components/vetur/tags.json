@@ -1,0 +1,22 @@
+{
+  "ax-table": {
+    "attributes": [
+      "table-column",
+      "column-list",
+      "table-data",
+      "edit-row-config",
+      "key-id",
+      "no-edit-ids",
+      "enable-header-custom",
+      "show-index",
+      "show-refresh",
+      "box-type",
+      "show-menu",
+      "loading",
+      "height",
+      "edit-mode",
+      "head-mode"
+    ],
+    "description": "表格组件"
+  }
+}

@@ -1,0 +1,106 @@
+@import 'var';
+
+.ax_board {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &_bar {
+    &.with_preset {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      background: $board_color_normal;
+      box-shadow: $board_shadow;
+    }
+  }
+
+  &_content {
+    flex: 1;
+    height: 0;
+
+    &.with_bar {
+      margin-top: 1rem;
+    }
+
+    &.with_preset {
+      background: $board_color_normal;
+      border-radius: 0.5rem;
+      box-shadow: $board_shadow;
+      padding: 0.75rem;
+      box-sizing: border-box;
+    }
+
+    &.with_split {
+      padding: 0;
+
+      &.with_preset {
+        padding: 0;
+
+        .ax_split {
+          .split_first {
+            padding: 0.75rem 0.5rem 0.75rem 0.75rem;
+            box-sizing: border-box;
+          }
+
+          .split_second {
+            padding: 0.75rem 0.75rem 0.75rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.table_absolute {
+    .ax_board_bar {
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .ax_board_content {
+      > div {
+        position: relative;
+        height: 100%;
+
+        > .ax_table {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .bar_flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+
+      > * {
+        margin: 0;
+      }
+    }
+  }
+
+  /* 内容区弹性自适应 */
+  .content_flex {
+    height: 100%;
+    display: flex;
+  }
+  .content_flex_col {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}

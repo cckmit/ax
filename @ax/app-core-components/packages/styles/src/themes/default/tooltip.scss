@@ -1,0 +1,23 @@
+/* 控件默认样式定义 */
+@import 'var';
+
+/* 工具提示 */
+.ax_tooltip {
+  /*   background: $menu_color_normal !important;
+    color: $menu_text_normal !important; */
+  box-shadow: $shadow_normal;
+
+  &[x-placement='right'] {
+    &::after {
+      display: block;
+      border: ($line_high_normal * 0.2) solid transparent;
+      /* border-right-color: $menu_color_normal; */
+      content: '';
+      position: absolute;
+      left: -$line_high_normal * 0.4;
+      top: 33%;
+      transform: translate(-50%, -50%);
+      transform: rotate(0deg);
+    }
+  }
+}

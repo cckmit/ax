@@ -1,0 +1,120 @@
+@import 'var';
+/* 最大 750 */
+$dialog_max_height: 46.875rem;
+$dialog_header_height: 4.5rem;
+$dialog_footer_height: 5.6rem;
+
+.ax_pop {
+  transform: translateX(-17px);
+  &:after {
+    transform: translateX(8.4px);
+    position: absolute;
+    content: '';
+    border-top: 17.4px transparent dashed;
+    border-left: 17.4px transparent dashed;
+    border-right: 17.4px transparent dashed;
+    border-bottom: 17.4px #0099cc solid;
+  }
+  &:after {
+    top: -34.8px; /*覆盖并错开1px*/
+    border-bottom: 17.4px rgba(39, 41, 43, 0.75) solid;
+  }
+
+  position: absolute;
+  background: rgba(39, 41, 43, 0.75);
+
+  max-width: 330px;
+
+  max-height: 80vh;
+
+  z-index: 3000;
+
+  .pop-close {
+    $width: 20px;
+    position: absolute;
+    right: 0;
+    top: -$width;
+    width: $width;
+    height: $width;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(212, 17, 31, 1);
+    color: rgba(255, 255, 255, 1);
+    &:hover {
+      background-color: red;
+    }
+  }
+}
+
+/* 对话框背景遮罩 */
+.v-modal {
+  z-index: 2000 !important;
+  opacity: 0.5;
+  background: #000;
+}
+
+/* 对话框样式 */
+
+.el-dialog {
+  width: auto;
+  min-width: $font_size_normal * 268 / 16;
+  background-color: $panel_color_normal;
+  font-size: $font_size_normal;
+  top: 0;
+  box-shadow: $shadow_normal;
+
+  .el-dialog__header {
+    cursor: move;
+    padding: 0 0 0 $line_high_normal;
+    height: $dialog_header_height;
+    line-height: $dialog_header_height;
+
+    .el-dialog__title {
+      font-size: $font_size_normal * 18 / 16;
+      font-weight: bold;
+    }
+    i.el-dialog__close {
+      color: $icon_color !important;
+      font-size: ($line_high_normal * 0.5) !important;
+      width: $line_high_normal * 0.8;
+      &:hover {
+        color: $panel_color_hover !important;
+      }
+
+      &:focus {
+        color: $panel_color_focus !important;
+      }
+
+      &:active {
+        color: $panel_color_active !important;
+      }
+    }
+  }
+
+  .el-dialog__body {
+    /* 最大的窗口高度 */
+    padding: 1rem 3.2rem 0 3.2rem;
+    max-height: 36.775rem;
+    span.ax_err_tips {
+      /* 表单错误提示字体大小 */
+      font-size: $font_size_normal * 0.85;
+    }
+  }
+
+  .el-dialog__footer {
+    /* 清理默认 */
+    padding: 0;
+    height: $line_high_normal * 2.8;
+    line-height: $line_high_normal * 2.8;
+    .dialog_button {
+      margin-right: $line_high_normal;
+    }
+  }
+  &.no_min_width {
+    min-width: auto;
+  }
+}
+
+.el-dialog__wrapper {
+  z-index: 2001 !important;
+}

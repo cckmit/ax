@@ -1,0 +1,256 @@
+@import 'var';
+
+/* 下拉框 */
+.ax_select {
+  display: inline-block;
+  position: relative;
+  height: $line_high_normal;
+  min-width: $select_min_width;
+  /*多选里面的标签*/
+  span.el-tag.el-tag--info.el-tag--small.el-tag--light {
+    margin: 0 0.3rem;
+    height: 1.9rem;
+    line-height: 1.9rem;
+  }
+
+  /* 校验通过样式 */
+  &.validate_passed {
+    .dropdown_box {
+      border: $border_validate_passed;
+    }
+
+    .el-input {
+      > input {
+        border: $border_validate_passed;
+      }
+    }
+
+    .dropdown_input {
+      input {
+        border: $border_validate_passed;
+      }
+    }
+  }
+
+  /* 校验失败样式 */
+  &.validate_failed {
+    .dropdown_box {
+      border: $border_validate_failed;
+    }
+    .el-input {
+      > input {
+        border: $border_validate_failed;
+      }
+    }
+
+    .dropdown_input {
+      input {
+        border: $border_validate_failed;
+      }
+    }
+  }
+
+  &.select_multiple {
+    .el-tag {
+      height: 1.4rem;
+      padding: 0 0.6rem;
+      line-height: 1.4rem;
+    }
+  }
+
+  &.select_adaptive {
+    height: auto;
+    .el-input {
+      height: auto;
+      input {
+        min-height: $line_high_normal;
+        vertical-align: baseline;
+      }
+    }
+  }
+
+  .el-select {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 输入下拉框 */
+  .el-input {
+    width: 100%;
+    height: 100%;
+
+    > input {
+      font-size: $font_size_normal;
+      color: $font_color_normal;
+      background-color: $color_body_normal;
+      border-radius: 0;
+      line-height: $line_high_normal;
+      border-color: #999;
+      padding: 0 1.6rem 0 0.6rem;
+      width: 100%;
+      height: 100%;
+
+      &:hover:not([disabled]) {
+        color: $font_color_hover;
+        background: $color_body_hover;
+        border: $border_hover;
+      }
+
+      &:focus:not([disabled]) {
+        color: $font_color_focus;
+        background: $color_body_focus;
+        border: $border_focus;
+      }
+
+      &:active:not([disabled]) {
+        color: $font_color_active;
+        background: $color_body_active;
+        border: $border_active;
+      }
+    }
+
+    > span {
+      right: $border_width;
+      overflow: hidden;
+
+      i {
+        width: $line_high_normal * 0.8;
+        height: 100%;
+        line-height: $line_high_normal;
+        font-size: $font_size_normal;
+        color: #b3b3b3;
+      }
+    }
+
+    &.is-disabled {
+      .el-input__inner {
+        background-color: #4c4c4c;
+        border-color: #4c4c4c;
+        color: #999;
+      }
+    }
+  }
+
+  /* 输入下拉框菜单 */
+  &_options {
+    border-color: #999;
+    border-radius: 0;
+
+    .el-select-dropdown {
+      border: $menu_border;
+      border-radius: $menu_radius;
+      margin: $line_high_normal * 0.3 0 0 0 !important;
+      padding: $menu_radius 0 $menu_radius 0;
+      background: $menu_color_normal;
+      color: $menu_text_normal;
+      box-shadow: $menu_shadow;
+      overflow: visible;
+
+      /* 下拉菜单容器 */
+      &__list {
+        padding: 0.2rem;
+        background-color: $color_body_normal;
+
+        /* 菜单项 */
+
+        > li[class*='hover'] {
+          background: $menu_color_focus;
+          color: $font_color_normal;
+
+          > span {
+            color: $menu_text_focus;
+          }
+        }
+
+        > li[class*='selected'] {
+          background: #001023;
+
+          > span {
+            font-weight: bold;
+            color: $menu_text_active;
+          }
+        }
+
+        > li.is-disabled:hover {
+          background: #001023;
+        }
+
+        > li[disabled] {
+          background: $menu_color_disabled;
+
+          > span {
+            color: $menu_text_disabled;
+          }
+        }
+
+        > li {
+          padding: 0 $line_high_normal * 0.6 0 $line_high_normal * 0.6;
+          height: $line_high_normal;
+          line-height: $line_high_normal;
+          font-size: $font_size_normal;
+          color: #aaa;
+
+          > span {
+            line-height: $line_high_normal;
+            font-size: $font_size_normal;
+            color: $menu_text_normal;
+          }
+
+          &:hover {
+            background: rgba(58, 123, 254, 0.8);
+
+            > span {
+              color: $menu_text_hover;
+            }
+          }
+
+          &:focus {
+            color: white;
+            background: $menu_color_focus;
+
+            > span {
+              color: $menu_text_focus;
+            }
+          }
+
+          &:active {
+            background: $menu_color_active;
+
+            > span {
+              color: $menu_text_active;
+            }
+          }
+        }
+      }
+
+      > p.el-select-dropdown__empty {
+        padding: 0 $line_high_normal * 0.6 0 $line_high_normal * 1.2;
+        line-height: $line_high_small;
+        font-size: $font_size_normal;
+        color: $menu_text_normal;
+        background: $menu_color_normal;
+        cursor: default;
+      }
+
+      > div[x-arrow] {
+        display: none !important;
+      }
+
+      &::after {
+        display: block;
+        border: $line_high_normal * 0.2 solid transparent;
+        border-bottom-color: $menu_color_normal;
+        content: '';
+        position: absolute;
+        top: -$line_high_normal * 0.19;
+        left: 15%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+/*选中的底色*/
+.ax_select_popper .el-select-dropdown__list>li[class*=selected]{
+  background: rgba(58,123,254,.8);
+  color: #fff;
+}

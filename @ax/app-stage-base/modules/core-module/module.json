@@ -1,0 +1,5 @@
+{
+    "app": "stage-base",
+    "module": "core-module",
+    "themesPath": "/assets/themes/"
+}

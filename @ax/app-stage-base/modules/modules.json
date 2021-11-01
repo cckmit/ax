@@ -1,0 +1,9 @@
+{
+  "name": "stage-base",
+  "list": [
+    { "name": "ax-stage-base", "dir": "core-module" },
+    { "name": "ax-doc-container", "dir": "doc-container" },
+    { "name": "ax-stage-header", "dir": "stage-header" },
+    { "name": "ax-stage-content", "dir": "stage-content" }
+  ]
+}

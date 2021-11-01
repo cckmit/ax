@@ -1,0 +1,77 @@
+/* 控件默认样式定义 */
+@import 'var';
+
+.progress {
+  user-select: none;
+  div.el-progress-bar {
+    padding-right: 0;
+    width: 95%;
+    margin-right: 0;
+    div.el-progress-bar__outer {
+      height: $line_high_normal !important;
+      div.el-progress-bar__inner {
+        height: $line_high_normal;
+        &:hover {
+          background-color: $button_color_hover;
+        }
+
+        &:active {
+          background-color: $button_color_active;
+        }
+
+        &:focus {
+          background-color: $button_color_focus;
+        }
+
+        &:disabled {
+          background-color: $button_color_disabled;
+        }
+      }
+    }
+  }
+
+  div.el-progress-circle {
+    path.el-progress-circle__track {
+      stroke: #0E4180;
+    }
+    path.el-progress-circle__path[stroke] {
+      &:hover {
+        stroke: $button_color_hover;
+      }
+
+      &:active {
+        stroke: $button_color_active;
+      }
+
+      &:focus {
+        color: $button_color_focus;
+      }
+
+      &:disabled {
+        color: $button_color_disabled;
+      }
+    }
+  }
+
+  /*文字*/
+  div.el-progress__text {
+    font-size: $font_size_normal !important;
+    color: $font_color_normal;
+
+    &:hover {
+      color: $font_color_hover;
+    }
+
+    &:active {
+      color: $font_color_active;
+    }
+
+    &:focus {
+      color: $font_color_focus;
+    }
+
+    &:disabled {
+      color: $font_color_disabled;
+    }
+  }
+}

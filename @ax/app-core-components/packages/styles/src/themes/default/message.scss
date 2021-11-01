@@ -1,0 +1,204 @@
+/* 控件默认样式定义 */
+@import 'var';
+
+/* 弹出对话框样式 */
+.ax_alert {
+  &.el-message-box {
+    width: 32rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  .el-message-box {
+    &__content {
+      padding: 1.5rem 2.5rem;
+      font-size: 1rem;
+
+      .el-message-box__status + .el-message-box__message {
+        padding-left: 5rem;
+        padding-right: 1rem;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__status {
+      font-size: 3.5rem !important;
+    }
+
+    &__btns {
+      padding: 0 2rem;
+
+      .el-button {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        box-sizing: border-box;
+        padding: 0 1.2rem;
+        height: 2rem;
+        outline: none;
+        color: #4d4d4d;
+        border-radius: 0.4rem;
+        border: none;
+        font-size: $font_size_normal;
+        flex: 0 0 auto;
+        transition: all 0.2s ease;
+        background: #edeff2;
+
+        &--primary {
+          color: white;
+          background: #449cf2;
+
+          &:hover {
+            background: #70b4f7;
+          }
+
+          &:active {
+            background: #3888d7;
+          }
+        }
+
+        &.ax_alert_cancel {
+          float: right;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/* 加载遮罩样式 */
+.ax_loading {
+  background-color: $color_body_cover;
+
+  .el-loading-spinner .path {
+    stroke: $icon_color_loading;
+  }
+}
+
+/* 信息提示框样式 */
+.ax_notify {
+  min-width: $line_high_normal * 10;
+  border-radius: $border_radius;
+  border: $border_normal;
+  background-color: $color_body_normal;
+  padding: $line_high_normal * 0.3 $line_high_normal * 0.5;
+  box-shadow: $shadow_normal;
+
+  .el-notification__title {
+    font-weight: bold;
+    font-size: $font_size_normal;
+    color: $font_color_normal;
+    line-height: $line_high_small;
+  }
+
+  .el-notification__content {
+    padding: 0;
+    margin: 0;
+    font-size: $font_size_normal;
+    color: $font_color_normal;
+    line-height: $line_high_small;
+  }
+
+  .el-notification__closeBtn {
+    top: $line_high_small * 0.5;
+    right: $line_high_small * 0.5;
+    color: $icon_color;
+
+    &:hover {
+      color: $icon_color_hover;
+    }
+  }
+
+  .el-notification__icon {
+    height: $line_high_small;
+    width: $line_high_small;
+    font-size: $line_high_small;
+  }
+
+  .el-icon-success {
+    color: $font_color_success;
+  }
+
+  .el-icon-info {
+    color: $font_color_info;
+  }
+
+  .el-icon-warning {
+    color: $font_color_warning;
+  }
+
+  .el-icon-error {
+    color: $font_color_error;
+  }
+
+  .el-message__icon {
+    height: $line_high_small;
+    width: $line_high_small;
+    font-size: $line_high_small;
+  }
+
+  .el-message__content {
+    padding: 0 !important;
+    font-size: $font_size_normal;
+    color: $font_color_normal;
+    margin-right: $line_high_normal * 0.5;
+    line-height: $line_high_small;
+  }
+
+  .el-message__closeBtn {
+    right: $line_high_small * 0.5;
+    color: $icon_color;
+
+    &:hover {
+      color: $icon_color_hover;
+    }
+  }
+}
+
+.ax_notify.el-message--success {
+  .el-message__icon {
+    color: $font_color_success;
+  }
+
+  .el-message__content {
+    color: $font_color_success;
+  }
+}
+
+.ax_notify.el-message--info {
+  .el-message__icon {
+    color: $font_color_info;
+  }
+
+  .el-message__content {
+    color: $font_color_info;
+  }
+}
+
+.ax_notify.el-message--warning {
+  .el-message__icon {
+    color: $font_color_warning;
+  }
+
+  .el-message__content {
+    color: $font_color_warning;
+  }
+}
+
+.ax_notify.el-message--error {
+  .el-message__icon {
+    color: $font_color_error;
+  }
+
+  .el-message__content {
+    color: $font_color_error;
+  }
+}
+
+.msg_tip {
+  color: $font_color_warning;
+}

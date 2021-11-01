@@ -1,0 +1,5 @@
+{
+    "app": "stage-base",
+    "module": "doc-container",
+    "themesPath": "/assets/themes/"
+}

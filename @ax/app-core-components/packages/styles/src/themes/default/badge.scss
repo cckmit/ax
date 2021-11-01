@@ -1,0 +1,61 @@
+/* 控件默认样式定义 */
+@import 'var';
+
+.ax_badge {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+
+  &_content {
+    border-radius: 0.6rem;
+    color: #fff;
+    display: inline-block;
+    font-size: 0.75rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0 0.4rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  sup {
+    &.is_fixed {
+      position: absolute;
+      top: 0;
+      right: 0.6rem;
+      transform: translateY(-50%) translateX(100%);
+
+      &.is_dot {
+        right: 0.3rem;
+      }
+    }
+
+    &.is_dot {
+      height: 0.5rem;
+      width: 0.5rem;
+      padding: 0;
+      right: 0;
+      border-radius: 50%;
+    }
+
+    &.type_primary {
+      background: #449cf2;
+    }
+
+    &.type_success {
+      background: #0ebf9c;
+    }
+
+    &.type_danger {
+      background: #ff5262;
+    }
+
+    &.type_warning {
+      background: #ff9b52;
+    }
+
+    &.type_info {
+      background: #909399;
+    }
+  }
+}

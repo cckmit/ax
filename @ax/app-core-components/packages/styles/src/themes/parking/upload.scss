@@ -1,0 +1,14 @@
+/* 控件默认样式定义 */
+@import 'var';
+
+.ax_upload {
+  display: inline-block;
+  position: relative;
+  height: $line_high_normal;
+  > div {
+    height: 100%;
+    .el-upload {
+      height: 100%;
+    }
+  }
+}

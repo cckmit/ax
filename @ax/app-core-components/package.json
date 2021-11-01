@@ -1,0 +1,137 @@
+{
+  "_from": "@ax/app-core-components@2.1.25",
+  "_id": "@ax/app-core-components@2.1.25",
+  "_inBundle": false,
+  "_integrity": "sha512-5JIJaYAzfhBy8yyI/z6o+KJnr/UpIUV8NXUFoMkLa15CURTlyXroI8FKkFv1yFc4hfyMLUYcBZcoNtYvNjAEhA==",
+  "_location": "/@ax/app-core-components",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@ax/app-core-components@2.1.25",
+    "name": "@ax/app-core-components",
+    "escapedName": "@ax%2fapp-core-components",
+    "scope": "@ax",
+    "rawSpec": "2.1.25",
+    "saveSpec": null,
+    "fetchSpec": "2.1.25"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://183.3.129.44:31060/@ax%2fapp-core-components/-/app-core-components-2.1.25.tgz",
+  "_shasum": "030b0b7c62f91e512efc20732849c9b5bb1cecca",
+  "_spec": "@ax/app-core-components@2.1.25",
+  "_where": "C:\\Users\\Mr.Yuan\\Desktop\\ws\\app-demo-modules",
+  "author": {
+    "name": "LNK-FE"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "bugs": {
+    "url": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-core/app-core-components/app-core-components-v2"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@ax/app-core-framework": "^2.2.0",
+    "@ax/app-core-language": "^1.1.4",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.8.33",
+    "element-ui": "^2.13.0",
+    "vue": "^2.6.11",
+    "vue-property-decorator": "^9.1.2"
+  },
+  "deprecated": false,
+  "description": "AxUI组件库",
+  "devDependencies": {
+    "@ax/app-core-api": "^1.0.3",
+    "@ax/app-core-style": "^1.0.0",
+    "@ax/app-stage-base": "^2.1.0",
+    "@ax/cli-service-vue": "^1.0.0",
+    "@ax/eslint-config-default": "^1.0.0",
+    "@ax/webpack-loaders": "^1.0.0",
+    "@ax/webpack-plugins": "^1.0.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@types/jest": "^26.0.13",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-plugin-typescript": "^4.3.1",
+    "@vue/cli-plugin-unit-jest": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "@vue/test-utils": "^1.1.0",
+    "autoprefixer": "^9.7.6",
+    "babel-plugin-component": "^1.1.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "html-loader": "^1.1.0",
+    "node-sass": "^4.12.0",
+    "postcss-normalize": "^9.0.0",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.0",
+    "typescript": "^4.0.2",
+    "vue-class-component": "^7.2.6",
+    "vue-router": "^3.1.3",
+    "vue-template-compiler": "^2.6.11",
+    "vuex": "^3.1.0"
+  },
+  "files": [
+    "lib",
+    "packages",
+    "types",
+    "vetur"
+  ],
+  "homepage": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-core/app-core-components/app-core-components-v2",
+  "keywords": [
+    "vue",
+    "UI组件库"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "@ax/app-core-components",
+  "peerDependencies": {
+    "@ax/app-core-framework": "2.x",
+    "@ax/app-core-language": "1.x",
+    "core-js": "3.x",
+    "dayjs": "1.x",
+    "element-ui": "2.x",
+    "vue": "2.x"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-normalize": {}
+    }
+  },
+  "publishConfig": {
+    "registry": "http://183.3.129.44:31060/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.2.30:nncs/front-end/html/vue/app-core/app-core-components/app-core-components-v2.git"
+  },
+  "scripts": {
+    "build": "vue-cli-service build",
+    "build:report": "vue-cli-service build --report",
+    "deploy": "npm run lib && npm run rollup && npm run publish",
+    "generate:vetur": "node ./build/generate-vetur.js",
+    "lib": "ax-cli-vue lib",
+    "lib:all": "npm run lib && npm run lib:locale",
+    "lib:locale": "ax-cli-vue locale",
+    "lib:publish": "npm publish",
+    "lib:types": "ax-cli-vue types",
+    "lib:unpublish": "npm unpublish --force",
+    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve",
+    "version:ls": "npm view @ax/app-core-components versions"
+  },
+  "style": "lib/index.css",
+  "typings": "types/index.d.ts",
+  "version": "2.1.25",
+  "vetur": {
+    "tags": "vetur/tags.json",
+    "attributes": "vetur/attributes.json"
+  }
+}

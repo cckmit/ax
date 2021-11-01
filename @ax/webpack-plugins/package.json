@@ -1,0 +1,75 @@
+{
+  "_from": "@ax/webpack-plugins@^1.0.0",
+  "_id": "@ax/webpack-plugins@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-kAuLO/ozoRH7sb1weN/hTjuwaEfXUdBYrEqYKOv7QEpG78lkarmBNYJH3GwiVtgFidtJTYe/coiXmj6PY9poWA==",
+  "_location": "/@ax/webpack-plugins",
+  "_phantomChildren": {
+    "chalk": "2.4.2",
+    "loglevelnext": "3.0.1",
+    "nanoid": "2.1.11"
+  },
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@ax/webpack-plugins@^1.0.0",
+    "name": "@ax/webpack-plugins",
+    "escapedName": "@ax%2fwebpack-plugins",
+    "scope": "@ax",
+    "rawSpec": "^1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.0"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "/@ax/cli-service-vue"
+  ],
+  "_resolved": "http://183.3.129.44:31060/@ax%2fwebpack-plugins/-/webpack-plugins-1.0.2.tgz",
+  "_shasum": "4b8c12dcd6ab24ea7bda61be11606bf7a89ea2ff",
+  "_spec": "@ax/webpack-plugins@^1.0.0",
+  "_where": "C:\\Users\\Mr.Yuan\\Desktop\\ws\\app-demo-modules",
+  "author": {
+    "name": "LNK-FE"
+  },
+  "bugs": {
+    "url": "https://183.3.129.44:31017/nncs/front-end/html/webpack-plugins/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "cssnano": "^4.1.10",
+    "postcss": "^7.0.30",
+    "postcss-automath": "^1.0.1",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^12.0.1",
+    "precss": "^4.0.0",
+    "webpack-log": "^3.0.1"
+  },
+  "deprecated": false,
+  "description": "项目用到的webpack插件合集",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "homepage": "https://183.3.129.44:31017/nncs/front-end/html/webpack-plugins",
+  "keywords": [
+    "webpack",
+    "plugin"
+  ],
+  "main": "lib/index.js",
+  "name": "@ax/webpack-plugins",
+  "private": false,
+  "publishConfig": {
+    "registry": "http://192.168.2.202:4873/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.2.30:nncs/front-end/html/webpack-plugins.git"
+  },
+  "scripts": {
+    "lib:publish": "npm publish",
+    "lib:unpublish": "npm unpublish --force",
+    "login": "npm login && npm login --registry=http://183.3.129.44:8090/repository/npm-hosted/"
+  },
+  "version": "1.0.2"
+}

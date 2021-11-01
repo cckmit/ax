@@ -1,0 +1,47 @@
+@import 'var';
+
+.ax_navigator {
+  display: flex;
+  align-items: center;
+
+  .navigator_item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    > * {
+      line-height: $line_high_normal;
+      font-size: $font_size_large;
+    }
+
+    > i {
+      font-style: normal;
+      font-size: $font_size_small;
+      cursor: default;
+      color: $navigator_link;
+      width: 1rem;
+      margin: 0 0.6rem;
+    }
+
+    .navigator_link {
+      cursor: pointer;
+      color: $navigator_link;
+
+      &:hover {
+        color: $navigator_hover;
+      }
+
+      &:focus {
+        color: $navigator_focus;
+      }
+
+      &:active {
+        color: $navigator_active;
+      }
+    }
+
+    .navigator_text {
+      color: $navigator_text;
+    }
+  }
+}

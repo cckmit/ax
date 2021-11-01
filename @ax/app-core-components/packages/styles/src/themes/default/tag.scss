@@ -1,0 +1,96 @@
+@import 'var';
+
+.ax_tag {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: $line_high_normal;
+  line-height: 1;
+  background: $tag_color_normal;
+  border: $tag_border;
+  box-sizing: border-box;
+  border-radius: $tag_radius;
+  padding: 0 1rem;
+  color: $tag_text_normal;
+  font-size: $font_size_normal;
+
+  & + & {
+    margin-left: 1rem;
+  }
+
+  &[disabled] {
+    color: $tag_text_disabled;
+    background: #f5f7fa;
+    border: #e8ebf0;
+    cursor: not-allowed;
+
+    .tag_close {
+      cursor: not-allowed;
+      color: $tag_text_disabled;
+    }
+
+    &:hover {
+      > i.el-icon-close {
+        color: $tag_text_normal;
+      }
+    }
+  }
+
+  .tag_close {
+    color: $tag_text_normal;
+    font-size: $font_size_normal;
+    right: -0.5rem;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &.tag_size_large {
+    height: 2.5rem;
+    padding: 0 1.2rem;
+    font-size: $font_size_large;
+
+    .tag_close {
+      font-size: $font_size_large;
+    }
+  }
+
+  &.tag_size_small {
+    height: 1.7rem;
+    padding: 0 0.6rem;
+    font-size: $font_size_small;
+
+    .tag_close {
+      font-size: $font_size_small;
+    }
+  }
+
+  &.tag_type_primary {
+    color: #449cf2;
+    border-color: #d9ecff;
+    background-color: #ecf5ff;
+  }
+
+  &.tag_type_success {
+    color: #0ebf9c;
+    border-color: #b3eee2;
+    background-color: #ebfaf5;
+  }
+
+  &.tag_type_warning {
+    color: #e6a23c;
+    border-color: #faecd8;
+    background-color: #fdf6ec;
+  }
+
+  &.tag_type_danger {
+    color: #ff5262;
+    border-color: #fdc8cd;
+    background-color: #fef5f5;
+  }
+
+  &.tag_type_info {
+    color: #999999;
+    border-color: #e9e9eb;
+    background-color: #f4f4f5;
+  }
+}

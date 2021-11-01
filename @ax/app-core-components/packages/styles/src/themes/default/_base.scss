@@ -1,0 +1,27 @@
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background: rgba(36, 38, 53, 0.1);
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: rgba(36, 38, 53, 0.15);
+}
+/* 经过时的颜色 */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(36, 38, 53, 0.25);
+}
+/* 当同时有垂直滚动条和水平滚动条时交汇的部分 */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  color: black;
+}

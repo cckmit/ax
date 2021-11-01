@@ -1,0 +1,359 @@
+{
+  "id": "2710623",
+  "name": "nn-icon-parking",
+  "font_family": "i_pk",
+  "css_prefix_text": "i_pk_",
+  "description": "停车系统",
+  "glyphs": [
+    {
+      "icon_id": "24900533",
+      "name": "照相",
+      "font_class": "zhaoxiang",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "24031714",
+      "name": "计费规则",
+      "font_class": "jifeiguize",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "24031715",
+      "name": "照片",
+      "font_class": "zhaopian",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "24031716",
+      "name": "缴费信息",
+      "font_class": "jiaofeixinxi",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "24031717",
+      "name": "计费信息",
+      "font_class": "jifeixinxi",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "23819005",
+      "name": "道路",
+      "font_class": "daolu",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "23452866",
+      "name": "无记录",
+      "font_class": "wujilu",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "23243852",
+      "name": "车场状态-定位",
+      "font_class": "chechangzhuangtai-dingwei",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "23243853",
+      "name": "车场状态-部署中",
+      "font_class": "chechangzhuangtai-bushuzhong",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "23243854",
+      "name": "车场状态-已部署",
+      "font_class": "chechangzhuangtai-yibushu",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "23231477",
+      "name": "本地外地车占比情况",
+      "font_class": "bendiwaidichezhanbiqingkuang",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "23231478",
+      "name": "车辆类型占有率分布",
+      "font_class": "cheliangleixingzhanyoushuaifenbu",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "23231479",
+      "name": "各区域本地外地车分布情况",
+      "font_class": "gequyubendiwaidichefenbuqingkuang",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "23231480",
+      "name": "车辆占有率分布",
+      "font_class": "cheliangzhanyoushuaifenbu",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "23231481",
+      "name": "各区域夜间停车占比",
+      "font_class": "gequyuyejiantingchezhanbi",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "23231252",
+      "name": "余位变化趋势",
+      "font_class": "yuweibianhuaqushi",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "23231253",
+      "name": "区域占用率分布",
+      "font_class": "quyuzhanyongshuaifenbu",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "23231254",
+      "name": "余位各指标分析",
+      "font_class": "yuweigezhibiaofenxi",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "23231255",
+      "name": "车场性质余位分析",
+      "font_class": "chechangxingzhiyuweifenxi",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "23230578",
+      "name": "区域停车压力分析",
+      "font_class": "quyutingcheyalifenxi",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "23230579",
+      "name": "实时车流量",
+      "font_class": "shishicheliuliang",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "23230573",
+      "name": "停车时长分布",
+      "font_class": "tingcheshichangfenbu",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "23230574",
+      "name": "车辆饱和度分析",
+      "font_class": "cheliangbaohedufenxi",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "23230575",
+      "name": "车场概况",
+      "font_class": "chechanggaikuang",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "23230576",
+      "name": "区域车辆流转情况",
+      "font_class": "quyucheliangliuzhuanqingkuang",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "23230577",
+      "name": "区域车场上线率",
+      "font_class": "quyuchechangshangxianshuai",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "23229189",
+      "name": "本地外地车分布",
+      "font_class": "bendiwaidichefenbu",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "23229190",
+      "name": "车辆停留时长分布",
+      "font_class": "cheliangtingliushichangfenbu",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "23229191",
+      "name": "车流量变化趋势",
+      "font_class": "cheliuliangbianhuaqushi",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "23229192",
+      "name": "车位使用率统计",
+      "font_class": "cheweishiyongshuaitongji",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "23229193",
+      "name": "油电车分布",
+      "font_class": "youdianchefenbu",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "23229194",
+      "name": "今日车流高峰时间段",
+      "font_class": "jinricheliugaofengshijianduan",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "23229195",
+      "name": "各区域车流量",
+      "font_class": "gequyucheliuliang",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "23229196",
+      "name": "高利用率停车场",
+      "font_class": "gaoliyongshuaitingchechang",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "23228356",
+      "name": "车场上线情况",
+      "font_class": "chechangshangxianqingkuang",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "23228357",
+      "name": "查询",
+      "font_class": "chaxun",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "23228358",
+      "name": "区域上线情况",
+      "font_class": "quyushangxianqingkuang",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "23228359",
+      "name": "区域上线率排名",
+      "font_class": "quyushangxianshuaipaiming",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "23228360",
+      "name": "重置",
+      "font_class": "zhongzhi",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "23228361",
+      "name": "厂商上线情况",
+      "font_class": "changshangshangxianqingkuang",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "22329011",
+      "name": "计费金额",
+      "font_class": "jifeijine",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "22329012",
+      "name": "车牌颜色",
+      "font_class": "chepaiyanse",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "22329013",
+      "name": "识别时间",
+      "font_class": "shibieshijian",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "22329014",
+      "name": "车辆类型",
+      "font_class": "cheliangleixing",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "22329015",
+      "name": "停车时长",
+      "font_class": "tingcheshichang",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "22329016",
+      "name": "识别车牌",
+      "font_class": "shibiechepai",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "22329017",
+      "name": "通道名称",
+      "font_class": "tongdaomingcheng",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "22595995",
+      "name": "外地车",
+      "font_class": "waidiche",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "22595996",
+      "name": "热力",
+      "font_class": "reli",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "22595997",
+      "name": "夜间",
+      "font_class": "yejian",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    }
+  ]
+}

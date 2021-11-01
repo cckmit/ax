@@ -1,0 +1,89 @@
+{
+  "_from": "@ax/app-core-api",
+  "_id": "@ax/app-core-api@1.11.0",
+  "_inBundle": false,
+  "_integrity": "sha512-dn/npsKvf3QPLX0F3dqJDxhvUPJuib9cmjnBwVtkitShxAODwMfnFrpQ9t0FgLInNFuV6v8Xe5Z8X9Trz3ZINA==",
+  "_location": "/@ax/app-core-api",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@ax/app-core-api",
+    "name": "@ax/app-core-api",
+    "escapedName": "@ax%2fapp-core-api",
+    "scope": "@ax",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://183.3.129.44:31060/@ax%2fapp-core-api/-/app-core-api-1.11.0.tgz",
+  "_shasum": "9f0a40e7a5cdc0baaef75cefa5dadf5478c885ef",
+  "_spec": "@ax/app-core-api",
+  "_where": "C:\\Users\\Mr.Yuan\\Desktop\\ws\\app-demo-modules",
+  "author": {
+    "name": "LNK-FE"
+  },
+  "bugs": {
+    "url": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-core/app-core-language/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@ax/app-core-framework": "^2.5.8",
+    "axios": "^0.19.0"
+  },
+  "deprecated": false,
+  "description": "项目API聚合",
+  "devDependencies": {
+    "@ax/eslint-config-default": "^1.0.0",
+    "change-case": "^4.1.2",
+    "minimist": "^1.2.5",
+    "node-fetch": "^2.6.1",
+    "prettier": "^2.1.2",
+    "rollup": "^2.36.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "simple-git": "^2.39.1",
+    "typescript": "^4.0.3"
+  },
+  "files": [
+    "lib",
+    "src",
+    "types"
+  ],
+  "homepage": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-core/app-core-language",
+  "keywords": [
+    "api"
+  ],
+  "license": "MIT",
+  "main": "lib/index.common.js",
+  "module": "lib/index.esm.js",
+  "name": "@ax/app-core-api",
+  "peerDependencies": {
+    "@ax/app-core-framework": "2.x"
+  },
+  "private": false,
+  "publishConfig": {
+    "registry": "http://183.3.129.44:31060/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.2.30:nncs/front-end/html/vue/app-core/app-core-language.git"
+  },
+  "scripts": {
+    "deploy": "node cli/deploy.js",
+    "eslint": "eslint --fix ./",
+    "lib": "rollup -c",
+    "lib:publish": "npm publish",
+    "lib:unpublish": "npm unpublish --force",
+    "prettier": "prettier -w ./",
+    "refresh": "npm run update && npm run eslint && npm run prettier && npm run lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "node cli/update.js"
+  },
+  "typings": "types/index.d.ts",
+  "version": "1.11.0"
+}

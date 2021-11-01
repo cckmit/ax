@@ -1,0 +1,40 @@
+{
+  "list": [
+    "ax-autocomplete",
+    "ax-badge",
+    "ax-board",
+    "ax-button",
+    "ax-cascader",
+    "ax-checkbox",
+    "ax-com-core",
+    "ax-date",
+    "ax-dialog",
+    "ax-divider",
+    "ax-dropdown",
+    "ax-form",
+    "ax-header",
+    "ax-input",
+    "ax-link",
+    "ax-message",
+    "ax-navigator",
+    "ax-panels",
+    "ax-pop",
+    "ax-progress",
+    "ax-radio",
+    "ax-search",
+    "ax-select",
+    "ax-split",
+    "ax-slider",
+    "ax-tab",
+    "ax-table",
+    "ax-tag",
+    "ax-time",
+    "ax-tooltip",
+    "ax-tree",
+    "ax-upload"
+  ],
+  "locale": {
+    "list": ["zh_CN", "en_US"],
+    "modules": ["ax-com-core"]
+  }
+}

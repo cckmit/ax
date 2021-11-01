@@ -1,0 +1,735 @@
+@import 'var';
+
+.ax_table {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-bottom: 2px solid #1c4290;
+  border-top: 2px solid #1c4290;
+
+  .tri_up {
+    &::after {
+      position: absolute;
+      content: ' ';
+      width: 0rem;
+      height: 0rem;
+      right: 0rem;
+      top: -0.7rem;
+      border: 0.7rem solid transparent;
+      border-right-color: #18cca8;
+    }
+  }
+
+  .el-table {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    padding-top: 3.3rem;
+    position: relative;
+    border: none;
+    color: $table_text_normal;
+    user-select: none;
+    border-image-width: 0;
+    background: transparent;
+
+    .cell,
+    th div {
+      padding: 0;
+    }
+
+    .el-table__header-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      tr,
+      th {
+        height: 3.3rem;
+        line-height: 3.3rem;
+      }
+
+      tr {
+        background: transparent;
+      }
+
+      th {
+        background: transparent;
+        padding: 0;
+        border-right: 2px solid;
+        border-image: linear-gradient(
+            transparent 20%,
+            rgba(195, 207, 217, 0.98),
+            transparent 80%
+        ) 1 1 1 1;
+
+        //border-image: $split_horizontal;
+        border-bottom: 0;
+        /*transform: translateX($font_size_small * 0.4);*/
+      }
+
+      .is-center,
+      .is-left,
+      .is-right {
+        text-align: center;
+      }
+
+      .is-leaf {
+      }
+    }
+
+    .el-table__body-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      z-index: 1;
+    }
+
+    .el-table__fixed-header-wrapper {
+      tr,
+      th {
+        height: 3.3rem;
+        line-height: 3.3rem;
+      }
+
+      th {
+        background: transparent;
+        padding: 0;
+        border-bottom: 0;
+      }
+    }
+
+    .el-table__fixed-body-wrapper {
+      bottom: 1rem;
+      right: 0;
+      margin-right: 1rem;
+
+      table {
+        margin-top: -1px;
+      }
+    }
+
+    .el-table__fixed-right {
+      &:before {
+        display: none;
+      }
+    }
+
+    .el-table__header-wrapper table,
+    .el-table__fixed-header-wrapper table {
+      border-collapse: separate;
+      border-spacing: 0;
+
+      th {
+        div {
+          padding: 0;
+        }
+
+        .cell {
+          height: 3.3rem;
+          line-height: 3.3rem;
+          font-weight: bold;
+          color: white;
+          /* 自定义表头 */
+          .table_head {
+            position: relative;
+            height: 100%;
+            width: 100%;
+
+            /*右边的 自定义按钮*/
+            .table_head_search {
+              position: absolute;
+              right: 0%;
+              top: 0%;
+              height: 100%;
+              width: $font_size_normal * 0.8;
+
+              &:hover {
+                background: $button_color_disabled;
+              }
+
+              .icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+              }
+            }
+
+            .gradient_border {
+              position: absolute;
+              width: 1px;
+              height: 100%;
+              right: 0%;
+              top: 0%;
+              background: $table_split_horizontal;
+            }
+
+            .table_head_text {
+              height: $line_high_normal * 1.7;
+              line-height: $line_high_normal * 1.7;
+              white-space: nowrap;
+              /*    text-overflow: ellipsis;
+              width: 100%; */
+            }
+
+            .table_head_name_icon {
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              /*  transform: translateY(-50%; */
+              width: $font_size_normal * 0.45;
+              height: $font_size_normal * 0.45;
+              top: 0%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 让 table 的内容和标题一样的宽 */
+  table.el-table__body > tbody > tr > td > div.cell {
+    width: 100% !important;
+  }
+
+  table {
+    border-image-width: 0;
+    /*间隔*/
+    border-collapse: separate;
+    border-spacing: 0 0.25rem;
+    font-size: $font_size_normal;
+
+    tbody {
+      /*****************某一行*********************/
+      tr.current-row {
+        background: #1c4290;
+
+        &:active {
+          background: #1c4290;
+
+          td {
+            .table_underline {
+              color: #fff;
+            }
+          }
+        }
+
+        td {
+          background: transparent;
+          border-image-width: 0;
+          border-color: transparent;
+          color: white;
+
+          &:first-child {
+            box-shadow: inset 6px 0 0 0 #449cf2;
+          }
+
+          .table_underline {
+            color: #ffffff;
+
+            &:active {
+              color: #ffffff;
+            }
+          }
+
+          i.table_image {
+            color: #fff;
+          }
+        }
+
+        /* table 内部的 current 状态的 checkbox */
+        div.cell > .el-checkbox {
+          /* 勾选框未选中 */
+          .el-checkbox__input {
+            .el-checkbox__inner {
+              border-color: white;
+              background: transparent;
+
+              &::after {
+                border-color: white;
+              }
+
+              &::before {
+                background-color: $tree_checkbox_color;
+              }
+            }
+          }
+
+          /* 普通选中样式 */
+          .is-checked.el-checkbox__input {
+            border-color: $checkbox_text_selected !important;
+            /* 勾选框选中 */
+            .el-checkbox__inner {
+              background: $checkbox_color_selected;
+              /*勾选中了,hover的时候,应该是要蓝色*/
+              &:hover {
+                background: $checkbox_color_selected;
+              }
+            }
+          }
+
+          /* 禁用状态样式 */
+          &.is-disabled {
+            border-color: $font_color_disabled !important;
+
+            /* 勾选框选中 */
+            .el-checkbox__inner {
+              background: $checkbox_color_disabled;
+              border-color: $checkbox_text_disabled !important;
+
+              &:hover {
+                background: $checkbox_color_disabled;
+              }
+
+              &:focus {
+                background: $checkbox_color_disabled;
+              }
+
+              &:active {
+                background: $checkbox_color_disabled;
+              }
+            }
+          }
+        }
+
+        div.cell > .table_operate {
+          .ax_link {
+            color: white;
+
+            &:before {
+              background: #d9d9d9;
+            }
+
+            &.is_disabled {
+              color: #d9d9d9;
+            }
+          }
+        }
+      }
+
+      /*****************hover 行*********************/
+      tr.hover-row {
+        //background: #d9ecfd;
+
+        &.current-row {
+          background: #1c4290;
+        }
+
+        td {
+        }
+      }
+
+      /*********************当前行,并且移动****************************/
+      tr.current-row.hover-row {
+        background: linear-gradient(165deg, #4ba7f7 0%, #3c91ed 100%);
+
+        td {
+          background: transparent;
+          color: #ffffff;
+          border-image-width: 0;
+          border-color: transparent;
+
+          .table_underline {
+            color: #ffffff;
+          }
+        }
+      }
+
+      tr {
+        padding: 0;
+        background: #00122d;
+        height: 2.85rem;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background: #1c4290;
+        }
+
+        &:active {
+          background: #1c4290;
+
+          td {
+            .table_underline {
+              color: $table_color_underline_active;
+            }
+          }
+        }
+
+        /*除了样式的 td 相关*/
+        td {
+          //transform: scaleX(1.001);
+          padding: 0;
+          /* 没有边框的宽度 */
+          border-width: 0;
+          line-height: $line_high_max;
+
+          &.is-left,
+          &.is-right {
+            padding: 0 0.4rem;
+          }
+
+          div.cell {
+            /*不换行*/
+            white-space: nowrap;
+            height: 2.6rem;
+            line-height: 2.6rem;
+            width: 100%;
+            /*  .non_edit_mode {
+              width: 100%;
+              height: $line_high_max;
+              line-height: $line_high_max;
+            } */
+
+            .align_left {
+              text-align: left;
+              padding: 0 0.4rem;
+            }
+
+            .align_right {
+              text-align: right;
+              padding: 0 0.4rem;
+            }
+          }
+
+          &:first-child {
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 3px 0 0 0 #449cf2;
+          }
+
+          &:last-child {
+            border-radius: 0 3px 3px 0;
+            /*   width: $font_size_normal * 0.5 !important;
+            .cell {
+              width: $font_size_normal * 0.5 !important;
+            } */
+          }
+
+          .table_image {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            > img {
+              width: 1.8rem;
+              height: 1.8rem;
+            }
+          }
+
+          i.table_image {
+            font-size: 1.8rem;
+            color: #449cf2;
+          }
+        }
+      }
+    }
+
+    /*表格内的按钮,长按 的时候设置为正常情况*/
+    .ax_button {
+      button {
+        &:focus {
+          background: $button_color_normal;
+          color: $button_text_normal;
+        }
+      }
+    }
+  }
+
+  .table_underline {
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: $table_color_underline_normal;
+  }
+
+  .editable_cell {
+    position: relative;
+    display: inline-block;
+    min-width: 85%;
+    height: 100%;
+    /*   width: 100%;
+    left: 0;
+    top: 0; */
+    .editable_cell_box {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      display: block;
+
+      .editable_cell_triangle {
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: $font_size_normal * 0.25 solid $table_tip_active;
+        border-top: $font_size_normal * 0.25 solid $table_tip_active;
+        border-right: $font_size_normal * 0.25 solid transparent;
+        border-bottom: $font_size_normal * 0.25 solid transparent;
+      }
+    }
+
+    /* 里面的输入框 */
+    .ax_input {
+      width: 100%;
+    }
+  }
+
+  /*  可以编辑--编辑状态 */
+  .cell_edit_input {
+    width: 100%;
+    height: 100%;
+
+    .ax_input {
+      min-width: auto;
+      user-select: auto;
+    }
+  }
+
+  /* 超过最大幅度就会有省略号 */
+  .ellipsis_width {
+    max-width: $font_size_normal * 20;
+  }
+
+  .ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .table_img {
+    width: $line_high_max;
+    height: $line_high_max;
+    padding: $font_size_normal * 0.1 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /*刷新按钮*/
+  .table_refresh {
+    line-height: unset;
+    cursor: pointer;
+  }
+
+  /*刷新按钮 动画效果*/
+  .refresh_rotate {
+    animation: go 1s linear infinite;
+  }
+
+  @keyframes go {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* 移动按钮 */
+  .move_button {
+    width: 99%;
+    height: 100%;
+
+    .move_button_item.ax_button {
+      width: $font_size_normal * 1.5;
+      height: $font_size_normal * 1.5;
+      line-height: $font_size_normal * 1.5;
+      margin: 0 $line_high_normal * 0.25;
+
+      button {
+        width: 100%;
+        height: 100%;
+        line-height: unset;
+        border-radius: 50%;
+        padding: 0;
+
+        > span {
+          line-height: unset;
+
+          i.iconfont {
+            font-size: $font_size_normal * 10/16;
+          }
+        }
+      }
+    }
+  }
+
+  /* 消灭table的边线 */
+  .el-table--border:after,
+  .el-table--group:after,
+  .el-table:before {
+    background-color: transparent;
+  }
+
+  /* 暂无数据的高度 */
+  .el-table__empty-block {
+    width: 95% !important;
+    height: 95%;
+    margin: 0 auto;
+  }
+
+  /* table 内部的 checkbox */
+  div.cell > .el-checkbox {
+    /* 勾选框未选中 */
+    .el-checkbox__input {
+      .el-checkbox__inner {
+        border: $tree_checkbox_border;
+        border-color: $table_color_checkbox_border_normal;
+        background: $checkbox_color_normal;
+        border-radius: $tree_checkbox_radius;
+        width: $line_high_normal * 0.6;
+        height: $line_high_normal * 0.6;
+
+        &::after {
+          border-radius: $checkbox_radius;
+          top: $line_high_normal * 0.03;
+          left: $line_high_normal * 0.12;
+          border-width: $line_high_normal * 0.1;
+          border-color: $tree_checkbox_color;
+          width: $line_high_normal * 0.15;
+          height: $line_high_normal * 0.25;
+        }
+
+        /* 中间模糊状态样式 */
+        &::before {
+          top: $line_high_normal * 0.1;
+          left: -$font_size_normal * 0.185;
+          border-width: $line_high_normal * 0.1;
+          background-color: $tree_checkbox_color;
+          width: $line_high_normal * 0.7;
+          height: $line_high_normal * 0.3;
+        }
+      }
+    }
+
+    /* 普通选中样式 */
+    /* 勾选框选中 */
+    .is-checked.el-checkbox__input {
+      border-color: $checkbox_text_selected !important;
+
+      .el-checkbox__inner {
+        border: $tree_checkbox_border;
+        border-color: $checkbox_color_normal;
+        background: $checkbox_color_normal;
+        border-radius: $tree_checkbox_radius;
+
+        &::after {
+          top: $line_high_normal * 0.03;
+          left: $line_high_normal * 0.12;
+          border-width: $line_high_normal * 0.1;
+          border-color: $tree_checkbox_color;
+          width: $line_high_normal * 0.15;
+          height: $line_high_normal * 0.25;
+        }
+
+        /* 中间模糊状态样式 */
+        &::before {
+          top: $line_high_normal * 0.1;
+          left: -$line_high_normal * 0.09;
+          border-width: $line_high_normal * 0.1;
+          background-color: $tree_checkbox_color;
+          width: $line_high_normal * 0.7;
+          height: $line_high_normal * 0.3;
+        }
+      }
+    }
+
+    /* 禁用状态样式 */
+    &.is-disabled {
+      border-color: $font_color_disabled !important;
+      /* 勾选框选中 */
+      &.el-checkbox__input {
+        .el-checkbox__inner {
+          background: $checkbox_color_disabled;
+          border-color: $checkbox_text_disabled !important;
+
+          &:hover {
+            background: $checkbox_color_disabled;
+          }
+
+          &:focus {
+            background: $checkbox_color_disabled;
+          }
+
+          &:active {
+            background: $checkbox_color_disabled;
+          }
+        }
+      }
+    }
+  }
+
+  /* 表头 和 表格 的第一个 cell 的 padding */
+  /* .el-table--border td:first-child .cell, .el-table--border th:first-child .cell, .el-table .cell, .el-table th div{
+    padding-left: 0;
+  } */
+
+  .el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: transparent;
+  }
+
+  /* 操作栏 */
+  .table_operate {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0 2rem;
+
+    &_left {
+      justify-content: flex-start;
+    }
+
+    &_center {
+      justify-content: center;
+    }
+
+    &_right {
+      justify-content: flex-end;
+    }
+
+    .ax_link {
+      position: relative;
+
+      &:before {
+        content: '';
+        left: -0.75rem;
+        width: 1px;
+        height: 1.4rem;
+        background: #d9d9d9;
+        position: absolute;
+      }
+
+      &:first-child {
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .col_enable {
+    .i_cc_right {
+      color: #51cd81;
+    }
+
+    .i_cc_wrong {
+      color: #ff5262;
+    }
+  }
+
+
+  div.cell>.el-checkbox .is-checked.el-checkbox__input .el-checkbox__inner{
+    background: #3A7BFF ;
+    &:after{
+      border-color: #ffffff;
+    }
+  }
+
+}

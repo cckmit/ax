@@ -1,0 +1,281 @@
+/* 组件全局变量定义 */
+
+/* ---------------- 输入框样式定义 ---------------- */
+$input_text_disabled: #c0c4cc;
+$input_color_disabled: transparent;
+$input_min_width: 15.5rem;
+/* ---------------- 一般输入控件定义 ---------------- */
+
+/* 字体基本定义 */
+$font_size_max: 1.8rem;
+$font_size_large: 1.2rem;
+$font_size_normal: 1rem;
+$font_size_small: 0.7rem;
+$font_size_min: 0.5rem;
+
+/* 文本及单行组件行高定义 */
+$line_high_max: 3rem;
+$line_high_large: 2.5rem;
+$line_high_normal: 2rem;
+$line_high_small: 1.5rem;
+$line_high_min: 1rem;
+
+/* 文本色定义 */
+$font_color_normal: #4d4d4d;
+$font_color_highlight: #449cf2;
+$font_color_selected: #ffffff;
+$font_color_disabled: #5c5c5c;
+$font_color_hover: #4d4d4d;
+$font_color_focus: #4d4d4d;
+$font_color_active: #4d4d4d;
+$font_color_success: #3ab936;
+$font_color_info: #33adff;
+$font_color_warning: #f09341;
+$font_color_error: #ff5233;
+$font_color_description: #808080;
+
+/* 控件颜色定义 */
+$color_body_normal: #ffffff;
+$color_body_highlight: #ffffff;
+$color_body_selected: #ffffff;
+$color_body_disabled: #f5f7fa;
+$color_body_hover: #ffffff;
+$color_body_focus: #ffffff;
+$color_body_active: #ffffff;
+$color_body_cover: #ffffff;
+
+/* 控件投影定义 */
+$shadow_normal: 0.1rem 0.2rem 0.9rem 0.2rem #00000038;
+
+/* 控件边线定义 */
+$border_width: 1px;
+$border_radius: 0.2rem;
+$border_normal: $border_width solid #d9d9d9;
+$border_highlight: $border_width solid #449cf2;
+$border_selected: $border_width solid #449cf2;
+$border_disabled: $border_width solid #e8ebf0;
+$border_hover: $border_width solid #b3b3b3;
+$border_focus: $border_width solid #449cf2;
+$border_active: $border_width solid #449cf2;
+$border_validate_passed: $border_width solid #50ff67;
+$border_validate_failed: $border_width solid #ff3333;
+
+/* ---------------- 指定控件定义 ---------------- */
+
+/* 按钮变量定义 */
+$button_color_normal: #edeff2;
+$button_color_highlight: linear-gradient(105deg, #4ba7f7, #3c91ed);
+$button_color_selected: linear-gradient(105deg, #4aa9fd, #3991eb);
+$button_color_disabled: #e5e5e5;
+$button_color_hover: linear-gradient(105deg, #61b6ff, #4ba7f7);
+$button_color_focus: linear-gradient(105deg, #4aa9fd, #3991eb);
+$button_color_active: linear-gradient(105deg, #61b6ff, #1b63c2);
+$button_text_normal: #4d4d4d;
+$button_text_highlight: #ffffff;
+$button_text_selected: #ffffff;
+$button_text_disabled: #5c5c5c;
+$button_text_hover: #ffffff;
+$button_text_focus: #ffffff;
+$button_text_active: #ffffff;
+$button_shadow: 0.1rem 0.2rem 0.9rem 0.2rem #00000025;
+$button_border_width: 0rem;
+$button_border: $button_border_width solid #ffffff;
+$button_radius: 0.2rem;
+
+/* 按钮变量定义 */
+$tag_color_normal: #ffffff;
+$tag_color_highlight: #61b6ff;
+$tag_color_selected: linear-gradient(165deg, #4ba7f7 0%, #3c91ed 100%);
+$tag_color_disabled: #e8ebf0;
+$tag_color_hover: linear-gradient(165deg, #4ba7f7 0%, #3c91ed 100%);
+$tag_color_focus: linear-gradient(165deg, #4ba7f7 0%, #3c91ed 100%);
+$tag_color_active: linear-gradient(165deg, #4ba7f7 0%, #3c91ed 100%);
+$tag_text_normal: #449cf2;
+$tag_text_highlight: #fefefe;
+$tag_text_selected: #fefefe;
+$tag_text_disabled: #828282;
+$tag_text_hover: #ffffff;
+$tag_text_focus: #ffffff;
+$tag_text_active: #ffffff;
+$tag_shadow: 0.1rem 0.2rem 0.9rem 0.2rem #00000025;
+$tag_border_width: 1px;
+$tag_border: $tag_border_width solid #449cf2;
+$tag_radius: 0.2rem !default;
+
+/* 菜单变量定义 */
+$menu_color_normal: #ffffff;
+$menu_color_disabled: #868686;
+$menu_color_hover: #d9ecfd;
+$menu_color_focus: #d9ecfd;
+$menu_color_active: #d9ecfd;
+$menu_text_normal: #d52fe4;
+$menu_text_disabled: #000000;
+$menu_text_hover: #449cf2;
+$menu_text_focus: #449cf2;
+$menu_text_active: #449cf2;
+$menu_shadow: 0.1rem 0.2rem 0.9rem 0.2rem #00000038;
+$menu_border: 0rem solid #eeeeee;
+$menu_radius: 0.3rem;
+
+/* 目录变量定义 */
+$tree_color_normal: #ffffff;
+$tree_color_selected: #d9ecfd;
+$tree_color_hover: #bce1fc;
+$tree_color_focus: #d9ecfd;
+$tree_color_active: #d9ecfd;
+$tree_text_normal: #4d4d4d;
+$tree_text_selected: #4d4d4d;
+$tree_text_hover: #4d4d4d;
+$tree_text_focus: #4d4d4d;
+$tree_text_active: #4d4d4d;
+$tree_node_border: 0rem solid #eeeeee;
+$tree_node_radius: 0.3rem;
+$tree_checkbox_radius: 0.15rem;
+$tree_checkbox_border: 0.1rem solid #edeff2;
+$tree_checkbox_color: #449cf2;
+$tree_border: 0.1rem solid #d9d9d9;
+$tree_radius: 0.3rem;
+
+/* 图标色定义 */
+$icon_color: #ff7402;
+$icon_color_hover: #00aaff;
+$icon_color_loading: #00aaff;
+
+/* 面板变量定义 */
+$panel_color_normal: #ffffff;
+$panel_color_disabled: #868686;
+$panel_color_hover: #2f9ce4;
+$panel_color_focus: #2f4ae4;
+$panel_color_active: #e6812e;
+$panel_text_normal: #2fe4e4;
+$panel_text_disabled: #2fe4e4;
+$panel_text_hover: #eeff04;
+$panel_text_focus: #2f4ae4;
+$panel_text_active: #ebd3c0;
+$panel_shadow: 0.1rem 0.2rem 0.9rem 0.2rem #00000038;
+$panel_border: 0.05rem solid #eeeeee;
+$panel_radius: 0.3rem;
+
+/* board */
+$board_color_normal: #ffffff !default;
+$board_shadow: 0rem 0rem 1rem 0rem rgba(20, 101, 85, 0.12) !default;
+
+/* 复选框变量定义 */
+$checkbox_color_normal: #ffffff;
+$checkbox_color_highlight: #449cf2;
+$checkbox_color_selected: #449cf2;
+$checkbox_color_disabled: #edf2fc;
+$checkbox_color_hover: #ffffff;
+$checkbox_color_focus: #ffffff;
+$checkbox_color_active: #95caff;
+$checkbox_text_normal: #4d4d4d;
+$checkbox_text_highlight: #449cf2;
+$checkbox_text_selected: #449cf2;
+$checkbox_text_disabled: #c0c4cc;
+$checkbox_text_hover: #4d4d4d;
+$checkbox_text_focus: #449cf2;
+$checkbox_text_active: #adadad;
+$checkbox_shadow: none;
+$checkbox_border_width: 0.1rem;
+$checkbox_border: $checkbox_border_width solid #449cf2;
+$checkbox_radius: 0.1rem;
+
+/* 单选框变量定义 */
+$radio_color_normal: #ffffff;
+$radio_color_highlight: #449cf2;
+$radio_color_selected: #449cf2;
+$radio_color_disabled: #adadad;
+$radio_color_hover: #ffffff;
+$radio_color_focus: #ffffff;
+$radio_color_active: #95caff;
+$radio_text_normal: #606266;
+$radio_text_highlight: #449cf2;
+$radio_text_selected: #449cf2;
+$radio_text_disabled: #5c5c5c;
+$radio_text_hover: #606266;
+$radio_text_focus: #449cf2;
+$radio_text_active: #adadad;
+$radio_shadow: none;
+$radio_border_width: 0.1rem;
+$radio_border: $radio_border_width solid #449cf2;
+$radio_radius: 100%;
+
+/* 表格变量定义 */
+$table_head_text_normal: #464d5e;
+$table_head_text_active: #464d5e;
+$table_head_text_hover: #f5f6f7;
+$table_head_text_focus: #f5f6f7;
+$table_head_text_selected: #f5f6f7;
+$table_row_head_color_noraml: #4ba7f7;
+
+$table_color_normal: #f5f6f7;
+$table_color_active: #4ba7f7;
+$table_color_hover: #bce1fc;
+$table_color_focus: linear-gradient(-75deg, #4ba7f7, #3c91ed);
+$table_color_selected: linear-gradient(-75deg, #3c91ed, #4ba7f7);
+
+$table_text_normal: #464d5e;
+$table_text_active: #464d5e;
+$table_text_hover: #f5f6f7;
+$table_text_focus: #f5f6f7;
+$table_text_selected: #f5f6f7;
+$table_split_horizontal: linear-gradient(
+  0deg,
+  #ffffff 0%,
+  #e5e5e5 45%,
+  #e5e5e5 55%,
+  #ffffff 100%
+);
+$table_tip_active: #ff5100;
+$table_color_checkbox_border_normal: #f2f2f2;
+$table_color_underline_normal: #4ba7f7;
+$table_color_underline_hover: #4ba7f7;
+$table_color_underline_active: #4ba7f7;
+$table_color_underline_selected: #4ba7f7;
+
+/* 标签页变量定义 */
+$tab_text_highlight: #449cf2;
+$tab_text_normal: #4d4d4d;
+$table_text_selected: #449cf2;
+$tab_text_disabled: #adadad;
+$tab_text_hover: #00aaff;
+$tab_text_focus: #449cf2;
+$tab_text_active: #449cf2;
+$tab_border: 0.2rem solid transparent;
+$tab_active_color: #409eff;
+
+/* Navigator */
+$navigator_link: #333333 !default;
+$navigator_text: #999999 !default;
+$navigator_hover: #449cf2 !default;
+$navigator_focus: #449cf2 !default;
+$navigator_active: #449cf2 !default;
+
+/* split */
+$split_horizontal: #e4edef !default;
+$split_vertical: #e4edef !default;
+
+/* 下拉框 */
+$select_color_normal: #ffffff;
+$select_text_normal: #4d4d4d;
+$select_color_highlight: #ffffff;
+$select_text_highlight: #4d4d4d;
+$select_color_selected: #ffffff;
+$select_text_selected: #4d4d4d;
+$select_color_disabled: #f5f7fa;
+$select_text_disabled: #c0c4cc;
+$select_color_hover: #ffffff;
+$select_text_hover: red;
+$select_color_focus: #ffffff;
+$select_text_focus: #4d4d4d;
+$select_color_active: #ffffff;
+$select_text_active: #4d4d4d;
+$select_color_cover: #fffffb;
+$select_border_normal: $border_width solid #ebebeb;
+$select_border_highlight: $border_width solid #ebebeb;
+$select_border_selected: $border_width solid #449cf2;
+$select_border_disabled: $border_width solid #e4e7ed;
+$select_border_hover: $border_width solid #c0c4cc;
+$select_border_focus: $border_width solid #449cf2;
+$select_border_active: $border_width solid #449cf2;
+$select_min_width: 15.5rem;

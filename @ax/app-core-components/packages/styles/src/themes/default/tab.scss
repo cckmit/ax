@@ -1,0 +1,52 @@
+/* 控件默认样式定义 */
+@import 'var';
+
+.ax_tab {
+  &.inner_mode {
+    width: 100%;
+    display: block;
+  }
+
+  &.outer_mode {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .tab_bar {
+    display: flex;
+    align-items: center;
+
+    .tab_item {
+      cursor: pointer;
+      color: $tab_text_normal;
+      font-size: $font_size_large;
+      line-height: 3.5rem;
+      border-bottom: $tab_border;
+      margin: 0 0.5rem;
+      padding: 0 1rem;
+
+      &:hover {
+        color: $tab_text_hover;
+      }
+
+      &:focus {
+        color: $tab_text_focus;
+      }
+
+      &:active {
+        color: $tab_text_active;
+      }
+    }
+
+    .tab_select {
+      border-color: $tab_active_color;
+      color: $tab_text_highlight;
+      font-weight: 500;
+    }
+  }
+
+  .tab_panels {
+    width: 100%;
+    overflow: auto;
+  }
+}

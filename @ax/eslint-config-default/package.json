@@ -1,0 +1,82 @@
+{
+  "_from": "@ax/eslint-config-default@^1.0.0",
+  "_id": "@ax/eslint-config-default@1.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-+tgNIFt/seMcJIzlyIoiwhc9FiczjXN6eupwsChtQG6v5KNAaH4fdTR0Ml59gZytGOsWKUUD7/qe8kF35DpzFQ==",
+  "_location": "/@ax/eslint-config-default",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@ax/eslint-config-default@^1.0.0",
+    "name": "@ax/eslint-config-default",
+    "escapedName": "@ax%2feslint-config-default",
+    "scope": "@ax",
+    "rawSpec": "^1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "http://183.3.129.44:31060/@ax%2feslint-config-default/-/eslint-config-default-1.0.3.tgz",
+  "_shasum": "c7b19386f61536f750e4b7807d9858ea5aa86f16",
+  "_spec": "@ax/eslint-config-default@^1.0.0",
+  "_where": "C:\\Users\\Mr.Yuan\\Desktop\\ws\\app-demo-modules",
+  "author": {
+    "name": "LNK-FE"
+  },
+  "bugs": {
+    "url": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-config-eslint-ts/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^5.0.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.1.2"
+  },
+  "deprecated": false,
+  "description": "项目统一的代码规范(Typescript)",
+  "files": [
+    "*.js"
+  ],
+  "homepage": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-config-eslint-ts",
+  "keywords": [
+    "eslint",
+    "typescript",
+    "vue"
+  ],
+  "license": "MIT",
+  "main": "./index.js",
+  "name": "@ax/eslint-config-default",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "@vue/eslint-config-prettier": "6.x",
+    "@vue/eslint-config-typescript": "5.x",
+    "eslint": "6.x",
+    "eslint-plugin-prettier": "3.x",
+    "eslint-plugin-vue": "6.x"
+  },
+  "private": false,
+  "publishConfig": {
+    "registry": "http://183.3.129.44:31019/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.2.30:nncs/front-end/html/vue/app-config-eslint-ts.git"
+  },
+  "scripts": {
+    "publish": "npm publish",
+    "unpublish": "npm unpublish --force",
+    "version:minor": "npm version minor --force",
+    "version:patch": "npm version prepatch --force",
+    "version:pmajor": "npm version major --force",
+    "version:prerelease": "npm version prerelease --preid=alpha --force"
+  },
+  "version": "1.0.3"
+}

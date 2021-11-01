@@ -1,0 +1,123 @@
+{
+  "_from": "@ax/app-stage-base@^2.1.0",
+  "_id": "@ax/app-stage-base@2.4.3",
+  "_inBundle": false,
+  "_integrity": "sha512-FEqLKvbVTYsDEFYl1coZiqMGswFCsWzW8O3hgmGT6sRuXel7f8OMI9wGEtzA4w58HX5PIFhyyq/9mAYUc2k1zQ==",
+  "_location": "/@ax/app-stage-base",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@ax/app-stage-base@^2.1.0",
+    "name": "@ax/app-stage-base",
+    "escapedName": "@ax%2fapp-stage-base",
+    "scope": "@ax",
+    "rawSpec": "^2.1.0",
+    "saveSpec": null,
+    "fetchSpec": "^2.1.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "http://183.3.129.44:31060/@ax%2fapp-stage-base/-/app-stage-base-2.4.3.tgz",
+  "_shasum": "8aaed0b445f5a74913623a81dad5f9dab8395d3e",
+  "_spec": "@ax/app-stage-base@^2.1.0",
+  "_where": "C:\\Users\\Mr.Yuan\\Desktop\\ws\\app-demo-modules",
+  "author": {
+    "name": "LNK-FE"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "bugs": {
+    "url": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-stage-base/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@ax/app-core-framework": "^2.2.1",
+    "@ax/app-core-language": "^1.1.0",
+    "@ax/app-core-style": "^1.0.0",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vue-property-decorator": "^9.1.2",
+    "vuex": "^3.1.0"
+  },
+  "deprecated": false,
+  "description": "开发展示组件库",
+  "devDependencies": {
+    "@ax/app-core-style": "^1.0.0",
+    "@ax/cli-service-vue": "^1.0.0",
+    "@ax/eslint-config-default": "^1.0.0",
+    "@ax/webpack-loaders": "^1.0.0",
+    "@ax/webpack-plugins": "^1.0.0",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-plugin-typescript": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "@vue/component-compiler-utils": "^3.2.0",
+    "babel-plugin-import": "^1.13.0",
+    "node-sass": "^4.12.0",
+    "postcss-normalize": "^9.0.0",
+    "prettier": "^2.0.4",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.0",
+    "sass-svg": "^1.2.0",
+    "typescript": "^4.0.2",
+    "vue-router": "^3.1.6",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "modules",
+    "src",
+    "types"
+  ],
+  "homepage": "https://183.3.129.44:31017/nncs/front-end/html/vue/app-stage-base",
+  "keywords": [
+    "vue",
+    "组件",
+    "展示"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "@ax/app-stage-base",
+  "peerDependencies": {
+    "@ax/app-core-framework": "2.x",
+    "@ax/app-core-language": "1.x",
+    "@ax/app-core-style": "1.x",
+    "core-js": "3.x",
+    "vue": "2.x",
+    "vue-property-decorator": ">=8.0",
+    "vuex": "3.x"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-normalize": {}
+    }
+  },
+  "private": false,
+  "publishConfig": {
+    "registry": "http://183.3.129.44:31019/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.2.30:nncs/front-end/html/vue/app-stage-base.git"
+  },
+  "scripts": {
+    "build": "vue-cli-service build",
+    "build:report": "vue-cli-service build --report",
+    "deploy": "npm run build && npm run lib && npm run publish",
+    "lib": "ax-cli-vue lib",
+    "lib:all": "npm run lib",
+    "lib:publish": "npm publish",
+    "lib:unpublish": "npm unpublish --force",
+    "lint": "vue-cli-service lint",
+    "lint:fix": "eslint --fix ./",
+    "serve": "vue-cli-service serve"
+  },
+  "typings": "types/index.d.ts",
+  "version": "2.4.3"
+}

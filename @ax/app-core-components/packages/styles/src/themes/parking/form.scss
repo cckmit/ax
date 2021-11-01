@@ -1,0 +1,185 @@
+/* 控件默认样式定义 */
+@import 'var';
+
+.ax_form {
+  position: relative;
+
+  /* 错误提示文本样式 */
+  .ax_err_tips {
+    position: absolute;
+    color: $font_color_error;
+    font-size: 0.85rem;
+    line-height: normal;
+    padding: 0.3rem 0 0 0;
+    margin: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  /* 校验通过边线颜色 */
+  .validate_passed {
+  }
+
+  /* 校验失败边线颜色 */
+  .validate_failed {
+  }
+
+  &.form_table {
+    > table,
+    .form_table_preset {
+      font-size: $font_size_normal;
+      width: 100%;
+
+      /*选择按钮*/
+      .select_button {
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        i {
+          &.i_cc_minus_circle {
+            color: #dd514c;
+          }
+          &.i_cc_plus_circle {
+            color: #378aff;
+          }
+        }
+      }
+
+      > tr {
+        vertical-align: middle !important;
+      }
+
+      > tr {
+        td {
+          vertical-align: top;
+          padding-bottom: $line_high_min;
+          height: auto;
+          line-height: $line_high_large;
+          box-sizing: content-box;
+
+          /* 标题不要换行,偏向右边 */
+          &:nth-child(1) {
+            text-align: right;
+            white-space: nowrap;
+            padding-right: $line_high_small;
+            &::after {
+              height: $line_high_large;
+              text-align: left;
+              content: ':';
+            }
+          }
+
+          /*  内容平时的值,最小值 */
+          &:nth-child(2) {
+            /* 在表单中,没有限制死 ax_input 和 ax_select 的最小宽度 */
+            > .ax_input,
+            > .ax_select {
+              min-width: auto;
+            }
+            /*320 长度*/
+            width: calc(#{$font_size_normal} * 20);
+            /*  给正常的下一个 */
+            > * {
+              width: 100%;
+              line-height: 1;
+            }
+
+            > &:nth-child(2) {
+              margin-left: $font_size_normal;
+            }
+
+            > .auto_size {
+              width: auto;
+              height: auto;
+            }
+          }
+
+          &:nth-child(3) {
+            /*320 长度*/
+            max-width: calc(#{$font_size_normal} * 14);
+            padding-bottom: 0;
+            padding-left: $line_high_small;
+            position: relative;
+            padding-top: $font_size_min;
+            line-height: 1.5;
+
+            &::before {
+              position: absolute;
+              top: 0.65rem;
+              left: 0;
+              width: $line_high_small;
+              height: $line_high_large;
+              color: red;
+              text-align: center;
+              content: '*';
+            }
+
+            &.not_require:before {
+              content: '';
+            }
+
+            .main_tip {
+              /* 只对英文起作用，以单词作为换行依据 */
+              /*    word-wrap: break-word;  */
+              /* 只对中文起作用，强制换行 */
+              /*  white-space: pre-wrap;  */
+              height: $line_high_small;
+              line-height: $line_high_small;
+            }
+            .sub_tip {
+              /* 只对英文起作用，以单词作为换行依据 */
+              /*    word-wrap: break-word;  */
+              /* 只对中文起作用，强制换行 */
+              /*  white-space: pre-wrap;  */
+              font-size: calc(#{$font_size_normal} * 14 / 16);
+              line-height: calc(#{$font_size_normal} * 15 / 16);
+            }
+          }
+        }
+
+        /*标题不带 : 符号 */
+        .no_sign {
+          &::after {
+            content: '' !important;
+          }
+        }
+
+        /* 多盒子 */
+        .multi_box {
+          > span {
+            margin: 0 0.5rem;
+          }
+          .ax_select,
+          .ax_input {
+            min-width: auto;
+          }
+          .ax_checkbox {
+            padding-left: 1rem;
+            box-sizing: border-box;
+          }
+          .multi_item {
+            min-width: auto;
+          }
+        }
+
+        .multi_box {
+          display: flex;
+          .multi_item {
+            flex: 1;
+            /*  &:nth-child(2) {
+              margin-left: $font_size_normal;
+            }*/
+          }
+        }
+
+        .no_tip {
+          &::before {
+            content: '' !important;
+          }
+        }
+      }
+    }
+  }
+}

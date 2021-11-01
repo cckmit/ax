@@ -1,0 +1,226 @@
+@import 'var';
+
+.ax_date {
+  height: 2rem;
+  line-height: 2rem;
+  min-width: 15.5rem;
+
+  /* 修改宽度 */
+  .el-date-editor.el-input,
+  .el-date-editor.el-input__inner {
+    width: 100%;
+  }
+
+  .el-date-editor--daterange {
+    background: #001023;
+  }
+
+  /* 修改内容的 padding */
+  .el-input--prefix .el-input__inner {
+    padding-left: $line_high_normal;
+  }
+
+  .el-input--suffix .el-input__inner {
+    padding-right: $line_high_normal;
+  }
+
+  > div {
+    height: 100%;
+
+    i {
+      color: #b3b3b3;
+      font-size: ($line_high_normal * 0.5);
+      line-height: 0;
+      width: $line_high_normal * 0.8;
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      border: $border_normal;
+      font-size: $font_size_normal;
+      border-radius: 0;
+      background: $color_body_normal;
+
+      &:disabled {
+        color: #777777;
+
+        + i.el-range__icon {
+          color: #777777;
+        }
+      }
+
+      &:hover {
+        color: $font_color_hover;
+
+        + i.el-range__icon {
+          color: $font_color_hover;
+        }
+      }
+
+      &:focus {
+        color: $font_color_hover;
+
+        + i.el-range__icon {
+          color: $font_color_hover;
+        }
+      }
+
+      &:active {
+        color: $font_color_hover;
+
+        + i.el-range__icon {
+          color: $font_color_hover;
+        }
+      }
+    }
+  }
+
+  /* 包含边框是 40px */
+  .el-input__inner {
+    box-sizing: border-box;
+  }
+
+  &_popper {
+    &.el-picker-panel {
+      background-color: $panel_color_normal;
+
+      div {
+        //color: $panel_text_normal;
+        font-size: $font_size_small;
+        background-color: $panel_color_normal;
+      }
+
+      /* 日期panel 的 margin */
+      &.el-popper[x-placement^='bottom'] {
+        margin-top: $font_size_normal;
+      }
+    }
+  }
+
+
+  /*图标上移*/
+  .el-date-editor i.el-range__icon {
+    line-height: 14px;
+  }
+
+  .el-date-editor .el-range-separator {
+    line-height: 14px;
+  }
+
+}
+
+
+/*标题文字*/
+div.el-picker-panel.el-date-range-picker.el-popper > div.el-picker-panel__body-wrapper > div > div.el-picker-panel__content.el-date-range-picker__content {
+  &.is-left, &.is-right {
+    /*数字*/
+    color: #fff;
+    /*头部*/
+    > div.el-date-range-picker__header > div {
+      color: #3A7BFF;
+    }
+  }
+}
+
+.el-picker-panel.el-date-picker.el-popper.has-time,.el-picker-panel.el-date-range-picker.el-popper.has-time {
+  /* 字体*/
+  .el-date-table {
+    td.available {
+      /*数字*/
+      color: #fff;
+
+      > div {
+        color: #fff;
+
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  /*脚底背景*/
+  .el-picker-panel__footer {
+    background-color: #001023;
+  }
+
+  .el-input__inner {
+    background-color: #001023;
+    color: #fff;
+
+    &:hover {
+      color: #449BF1;
+    }
+  }
+
+  .el-button {
+    background: #449BF1;
+    border: 1px solid #449bf1;
+    color: #fff;
+    /*第一个*/
+    &:first-child {
+      background: unset;
+      border: 0px;
+
+      &:hover {
+        background: unset;
+      }
+    }
+
+    &:hover {
+      background: #1974cd;
+    }
+
+  }
+}
+
+/*单条头部*/
+.el-date-picker {
+  .el-date-picker__header-label {
+    color: #3A7BFF;
+  }
+}
+
+
+/*白色日期*//*白色日期下面*/
+.el-date-table th {
+  color: #fff;
+  border-bottom: solid 1px #3a3a3a;
+}
+
+/*上个月下个月的颜色*/
+.el-date-table {
+  td.next-month, td.prev-month {
+    color: #3a3a3a;
+  }
+}
+
+/*箭头*/
+.el-picker-panel__icon-btn {
+  color: #fff;
+
+}
+
+/*一头一尾*/
+.el-date-table td.end-date span, .el-date-table td.start-date span {
+  color: #fff;
+}
+
+/*范围*/
+.el-date-table td.in-range {
+  color: #3a3a3a;
+}
+
+/*时间选择*/
+.el-time-spinner__item.active:not(.disabled) {
+  color: #fff;
+}
+
+.ax_date {
+  .el-input__inner {
+    background-color: rgb(0, 16, 35);
+    border-radius: 0;
+  }
+}
+

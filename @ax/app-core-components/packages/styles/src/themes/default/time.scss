@@ -1,0 +1,80 @@
+@import 'var';
+
+.ax_time {
+  height: 2rem;
+  line-height: 2rem;
+  min-width: 15.5rem;
+
+  /* 校验通过样式 */
+  &.validate_passed {
+    .el-input {
+      > input {
+        border: $border_validate_passed;
+      }
+    }
+  }
+
+  /* 校验失败样式 */
+  &.validate_failed {
+    .el-input {
+      > input {
+        border: $border_validate_failed;
+      }
+    }
+  }
+
+  .el-range-editor {
+    height: 100%;
+  }
+
+  /* 输入下拉框 */
+  > .el-date-editor:not(.el-range-editor) {
+    width: 100%;
+    height: 100%;
+
+    > input {
+      font-size: $font_size_normal;
+      border-radius: $border_radius;
+      line-height: $line_high_normal;
+      width: 100%;
+      height: 100%;
+
+      &:hover:not([disabled]) {
+        color: $font_color_hover;
+        background: $color_body_hover;
+        border: $border_hover;
+      }
+
+      &:focus:not([disabled]) {
+        color: $font_color_focus;
+        background: $color_body_focus;
+        border: $border_focus;
+      }
+
+      &:active:not([disabled]) {
+        color: $font_color_active;
+        background: $color_body_active;
+        border: $border_active;
+      }
+    }
+  }
+
+  .el-input--prefix {
+    .el-input__inner {
+      padding-left: $line_high_normal;
+    }
+  }
+  .el-input--suffix {
+    .el-input__inner {
+      padding-left: $line_high_normal;
+    }
+  }
+  .el-input__icon {
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .el-range-separator {
+    height: 2rem;
+    line-height: 2rem;
+  }
+}

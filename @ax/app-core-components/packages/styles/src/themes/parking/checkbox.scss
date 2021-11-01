@@ -1,0 +1,313 @@
+/* 控件默认样式定义 */
+@import 'var';
+
+.ax_checkbox {
+  display: inline-block;
+  position: relative;
+  height: $line_high_normal;
+
+  /* -------------------- 普通多选样式 -------------------- */
+  .checkbox {
+    height: 100%;
+    box-shadow: $checkbox_shadow;
+
+    /* 勾选框未选中 */
+    .el-checkbox__input {
+      margin-top: -$line_high_normal * 0.1;
+
+      .el-checkbox__inner {
+        border: $checkbox_border;
+        width: $line_high_normal * 0.6;
+        height: $line_high_normal * 0.6;
+        background: $checkbox_color_normal;
+        border-radius: $checkbox_radius;
+
+        &::after {
+          border-radius: $checkbox_radius;
+          top: $line_high_normal * 0.03;
+          left: $line_high_normal * 0.12;
+          border-width: $line_high_normal * 0.1;
+          border-color: white;
+          width: $line_high_normal * 0.15;
+          height: $line_high_normal * 0.25;
+        }
+
+        /* 中间模糊状态样式 */
+        &::before {
+          top: $line_high_normal * 0.1;
+          left: -$line_high_normal * 0.09;
+          border-width: $line_high_normal * 0.1;
+          background-color: $checkbox_color_normal;
+          width: $line_high_normal * 0.7;
+          height: $line_high_normal * 0.3;
+        }
+      }
+    }
+
+    /* 普通文字 */
+    .el-checkbox__label {
+      font-size: $font_size_normal;
+      line-height: $line_high_normal;
+      padding: 0 $line_high_normal * 0.3 0 $line_high_normal * 0.3;
+      color: $checkbox_text_normal;
+      text-overflow: ellipsis;
+
+      &:hover {
+        color: $checkbox_text_hover;
+      }
+
+      &:focus {
+        color: $checkbox_text_focus;
+      }
+
+      &:active {
+        color: $checkbox_text_active;
+      }
+    }
+
+    /* 焦点样式 */
+    .is-focus {
+      border-color: $checkbox_text_focus !important;
+
+      /* 勾选框选中 */
+      .el-checkbox__inner {
+        background: $checkbox_color_focus;
+      }
+    }
+  }
+
+  /* -------------------- 开关多选样式 -------------------- */
+  .switch {
+    height: 100%;
+    box-shadow: $checkbox_shadow;
+
+    > span {
+      border: $checkbox_border;
+      border-color: $checkbox_color_disabled;
+      width: $line_high_normal * 1.6 !important;
+      height: $line_high_normal * 0.8;
+      background: $checkbox_color_disabled;
+      border-radius: $line_high_normal;
+
+      &:hover {
+        border-color: $checkbox_color_hover;
+      }
+
+      &:focus {
+        border-color: $checkbox_color_focus;
+      }
+
+      &:active {
+        border-color: $checkbox_color_active;
+      }
+
+      &::after {
+        background: $checkbox_color_normal;
+        height: $line_high_normal * 0.55;
+        width: $line_high_normal * 0.55;
+        margin-left: $line_high_normal * 0.08;
+        top: 50%;
+        transform: translate(-5%, -50%);
+      }
+    }
+  }
+
+  /* 开关复选框选中样式 */
+  .switch.is-checked {
+    > span {
+      background-color: $checkbox_color_selected;
+
+      &:after {
+        left: 100%;
+        margin-left: -$line_high_normal * 0.61;
+      }
+    }
+  }
+
+  /* 开关复选框无效样式 */
+  .switch.is-disabled {
+    > span {
+      cursor: default;
+      background-color: $checkbox_color_disabled;
+
+      &:hover {
+        border-color: $checkbox_color_disabled;
+      }
+
+      &:focus {
+        border-color: $checkbox_color_disabled;
+      }
+
+      &:active {
+        border-color: $checkbox_color_disabled;
+      }
+    }
+  }
+
+  /* -------------------- 按钮多选样式 -------------------- */
+  .checkbox-button {
+    height: 100%;
+    box-shadow: $checkbox_shadow;
+
+    /* 按钮文本 */
+    .el-checkbox-button__inner {
+      border: $border_normal;
+      background: $color_body_normal;
+      border-radius: $border_radius;
+      font-size: $font_size_normal;
+      line-height: $line_high_normal;
+      padding: 0 $line_high_normal * 0.3 0 $line_high_normal * 0.3;
+      color: $font_color_normal;
+
+      &:hover {
+        color: $font_color_hover;
+        background-color: $color_body_hover;
+        border: $border_hover;
+      }
+
+      &:focus {
+        color: $font_color_focus;
+        background-color: $color_body_focus;
+        border: $border_focus;
+      }
+
+      &:active {
+        color: $font_color_active;
+        background-color: $color_body_active;
+        border: $border_active;
+      }
+    }
+  }
+
+  /* -------------------- 复选框边框样式 -------------------- */
+  .is-bordered {
+    padding: 0 0 0 $line_high_normal * 0.3;
+    border: $border_normal;
+    border-radius: $border_radius;
+
+    &:hover {
+      border: $border_hover;
+    }
+
+    &:focus {
+      border: $border_focus;
+    }
+
+    &:active {
+      border: $border_active;
+    }
+  }
+
+  /* -------------------- 选中样式 -------------------- */
+  .is-checked {
+    border-color: $checkbox_text_selected !important;
+
+    /* 勾选框选中 */
+    .el-checkbox__input {
+      .el-checkbox__inner {
+        background: $checkbox_color_selected;
+      }
+    }
+
+    /* 选中文字 */
+    .el-checkbox__label {
+      color: $checkbox_text_selected;
+
+      &:hover {
+        color: $checkbox_text_selected;
+      }
+
+      &:focus {
+        color: $checkbox_text_focus;
+      }
+
+      &:active {
+        color: $checkbox_text_active;
+      }
+    }
+
+    /* 按钮文本 */
+    .el-checkbox-button__inner {
+      border: $border_selected;
+      border-left-color: $font_color_highlight !important;
+      background: $color_body_selected;
+      color: $font_color_selected;
+    }
+  }
+
+  /* -------------------- 禁用样式 -------------------- */
+  .is-disabled {
+    cursor: default !important;
+    border-color: $font_color_disabled !important;
+
+    /* 勾选框选中 */
+    .el-checkbox__input {
+      .el-checkbox__inner {
+        cursor: default;
+        background: $checkbox_color_disabled;
+        border-color: $checkbox_text_disabled !important;
+
+        &::after {
+          cursor: default !important;
+        }
+
+        &:hover {
+          background: $checkbox_color_disabled;
+        }
+
+        &:focus {
+          background: $checkbox_color_disabled;
+        }
+
+        &:active {
+          background: $checkbox_color_disabled;
+        }
+      }
+    }
+
+    /* 选中文字 */
+    .el-checkbox__label {
+      cursor: default !important;
+      color: $checkbox_text_disabled !important;
+
+      &:hover {
+        color: $checkbox_text_disabled;
+      }
+
+      &:focus {
+        color: $checkbox_text_disabled;
+      }
+
+      &:active {
+        color: $checkbox_text_disabled;
+      }
+    }
+
+    /* 按钮文本 */
+    .el-checkbox-button__inner {
+      cursor: default;
+      border: $border_disabled;
+      border-left-color: $font_color_disabled !important;
+      background: $color_body_disabled;
+      color: $font_color_disabled;
+
+      &:hover {
+        color: $font_color_disabled;
+        background-color: $color_body_disabled;
+        border: $border_disabled;
+      }
+
+      &:focus {
+        color: $font_color_disabled;
+        background-color: $color_body_disabled;
+        border: $border_disabled;
+      }
+
+      &:active {
+        color: $font_color_disabled;
+        background-color: $color_body_disabled;
+        border: $border_disabled;
+      }
+    }
+  }
+}
